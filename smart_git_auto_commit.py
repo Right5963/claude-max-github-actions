@@ -21,15 +21,15 @@ class SmartGitAutoCommit:
         self.interval = 1800  # 30分
         self.min_change_threshold = 3  # 最低3ファイルの変更
         
-        # 除外パターン
-        self.ignored_patterns = [
-            r'.*\.log$',
+        # .gitignoreから除外パターンを読み込み
+        self.ignored_patterns = self.load_gitignore_patterns()
+        
+        # 追加の除外パターン（.gitignoreにないもの）
+        self.ignored_patterns.extend([
             r'.*\.pid$',
             r'sessions/.*',
             r'auto_systems_logs/.*',
-            r'.*\.pyc$',
-            r'__pycache__/.*',
-        ]
+        ])
         
         # 機密情報パターン
         self.sensitive_patterns = [
@@ -56,6 +56,33 @@ class SmartGitAutoCommit:
         with open(self.state_file, 'w') as f:
             json.dump(state, f, indent=2)
     
+    def load_gitignore_patterns(self):
+        """実際の.gitignoreからパターンを読み込み"""
+        patterns = []
+        gitignore_path = os.path.join(self.work_dir, '.gitignore')
+        
+        try:
+            with open(gitignore_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    # コメントや空行をスキップ
+                    if line and not line.startswith('#'):
+                        # 生の文字列をそのまま使用（正規表現変換なし）
+                        patterns.append(line)
+            
+            print(f"📋 .gitignore読み込み完了: {len(patterns)}パターン")
+        except Exception as e:
+            print(f"⚠️ .gitignore読み込みエラー: {e}")
+            # フォールバック: 基本パターン
+            patterns = [
+                '*.log',
+                '*.pyc',
+                '__pycache__',
+                '.git',
+            ]
+        
+        return patterns
+    
     def run_git_command(self, command):
         """Gitコマンドを実行"""
         try:
@@ -80,9 +107,31 @@ class SmartGitAutoCommit:
     
     def is_ignored(self, filepath):
         """無視すべきファイルかチェック"""
-        for pattern in self.ignored_patterns:
-            if re.match(pattern, filepath):
+        import fnmatch
+        
+        # まずGitのstatus --porcelainで確認（最も正確）
+        try:
+            result = subprocess.run(
+                ["git", "check-ignore", filepath],
+                cwd=self.work_dir,
+                capture_output=True,
+                text=True
+            )
+            # git check-ignoreが成功（リターンコード0）なら無視対象
+            if result.returncode == 0:
                 return True
+        except:
+            pass
+        
+        # フォールバック: 手動パターンチェック
+        for pattern in self.ignored_patterns:
+            try:
+                # 正規表現の代わりにfnmatchを直接使用（より安全）
+                if fnmatch.fnmatch(filepath, pattern) or fnmatch.fnmatch(f"*/{filepath}", pattern):
+                    return True
+            except:
+                continue
+        
         return False
     
     def check_sensitive_info(self, filepath):
