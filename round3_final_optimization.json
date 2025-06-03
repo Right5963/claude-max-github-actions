@@ -1,0 +1,76 @@
+{
+  "round": 3,
+  "audit_date": "2025-06-02T21:00:55.416526",
+  "total_systems": 63,
+  "categories": {
+    "CORE_SALES": 11,
+    "AUTOMATION": 10,
+    "ANALYSIS": 6,
+    "FOUNDATION": 4,
+    "UTILITY": 8,
+    "QUESTIONABLE": 21,
+    "DELETE": 3
+  },
+  "recommendations": {
+    "KEEP_PRIORITY": 14,
+    "KEEP": 10,
+    "CONDITIONAL_KEEP": 10,
+    "REVIEW": 7,
+    "DELETE": 22
+  },
+  "utility_rate": 38.095238095238095,
+  "final_systems": {
+    "keep_priority": [
+      "poster_prompt_generator.py",
+      "sales_improvement_core.py",
+      "selling_cycle_tracker.py",
+      "selling_image_research.py",
+      "yahoo_auction_real_automation.py",
+      "yahoo_auction_simple.py",
+      "yahoo_poster_workflow.py",
+      "yahoo_sales_analyzer.py",
+      "yahoo_auction_ai_system/yahoo_auction_playwright.py",
+      "yahoo_auction_ai_system/yahoo_auction_scraper.py",
+      "yahoo_auction_ai_system/yahoo_auction_selenium.py",
+      "llm_pdca_automation.py",
+      "one_click_automation.py",
+      "pdca_automation.py"
+    ],
+    "keep_regular": [
+      "ai_insight_evaluator.py",
+      "civitai_analyzer.py",
+      "civitai_model_fetcher.py",
+      "competitor_analyzer_unified.py",
+      "deep_necessity_fix_analyzer.py",
+      "smart_competitor_ai.py",
+      "hybrid_intelligence.py",
+      "llm_integration.py",
+      "session_manager.py",
+      "yahoo_wildcard_integration.py"
+    ],
+    "delete_candidates": [
+      "brutal_necessity_audit.py",
+      "iterative_audit_round2.py",
+      "round3_final_optimization.py",
+      "itrs_cli.py",
+      "popularity_research.py",
+      "prompt_dictionary_to_wildcard.py",
+      "sd_intelligent_advisor.py",
+      "start.py",
+      "system_purpose_analysis.py",
+      "thinking_core_simple.py",
+      "thinking_enhancement_practice.py",
+      "ultimate_yahoo_ai.py",
+      "value_creation_cycle_analysis.py",
+      "why.py",
+      "yahoo_image_downloader.py",
+      "yahoo_quick_research.py",
+      "code-generation-framework/setup.py",
+      "code-generation-framework/setup_fixed.py",
+      "code-generation-framework/generated-code/standalone_test_1.py",
+      "code-generation-framework/generated-code/standalone_test_1_test.py",
+      "research-system/verification/fact_verifier.py",
+      "yahoo_auction_ai_system/generate_production_wildcard.py"
+    ]
+  }
+}

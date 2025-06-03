@@ -1,0 +1,67 @@
+{
+  "test_date": "2025-06-02T19:59:01.152943",
+  "test_results": {
+    "selling_cycle_tracker.py": {
+      "status": "HOLLOW",
+      "reason": "はりぼて機能",
+      "executable": true,
+      "useful": false
+    },
+    "auto_competitor_analyzer.py": {
+      "status": "PASS",
+      "reason": "動作確認済み",
+      "executable": true,
+      "useful": true
+    },
+    "ai_insight_evaluator.py": {
+      "status": "PASS",
+      "reason": "動作確認済み",
+      "executable": true,
+      "useful": true
+    },
+    "real_ai_evaluator.py": {
+      "status": "PASS",
+      "reason": "動作確認済み",
+      "executable": true,
+      "useful": true
+    },
+    "smart_competitor_ai.py": {
+      "status": "PASS",
+      "reason": "動作確認済み",
+      "executable": true,
+      "useful": true
+    },
+    "hybrid_intelligence_system.py": {
+      "status": "HOLLOW",
+      "reason": "はりぼて機能",
+      "executable": true,
+      "useful": false
+    },
+    "pdca_automation.py": {
+      "status": "HOLLOW",
+      "reason": "はりぼて機能",
+      "executable": true,
+      "useful": false
+    },
+    "llm_pdca_automation.py": {
+      "status": "HOLLOW",
+      "reason": "はりぼて機能",
+      "executable": true,
+      "useful": false
+    }
+  },
+  "dependencies": {
+    "Ollama": false,
+    "PowerShell": true,
+    "OpenAI API": false,
+    "MCP Bridge": true
+  },
+  "scores": {
+    "total_score": 50.0,
+    "grade": "C: 要改善",
+    "working_systems": 4,
+    "hollow_systems": 4,
+    "broken_systems": 0
+  },
+  "conclusion": "部分的に有用"
+}

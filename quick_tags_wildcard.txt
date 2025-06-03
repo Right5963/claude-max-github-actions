@@ -1,0 +1,16 @@
+# quick_tags Wildcard
+        
+__positive_tags__
+detailed, 詳細, cute, 高画質, かわいい女の子 ファンタジー, エレガント, anime style, デジタルアート, masterpiece, best quality
+
+__negative_tags__
+lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality
+
+__style_variants__
+anime style
+realistic style
+digital art style
+illustration style
+
+__quality_boost__
+masterpiece, best quality, ultra detailed, 8k, high resolution

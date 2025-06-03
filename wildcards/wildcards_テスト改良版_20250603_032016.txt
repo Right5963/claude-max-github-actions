@@ -1,0 +1,7 @@
+# Wildcard for テスト改良版
+# Generated: 2025-06-03 03:20:16
+# Total tags: 15
+
+# Main template:
+# 1girl, solo, {characterface}, {characterbody}, {clothing}, {poseemotion}, {angle}, {backgrounds}, {style}
+

@@ -1,0 +1,22 @@
+{
+  "cycles": [],
+  "current_cycle": {
+    "id": 1,
+    "start_date": "2025-06-02T20:03:10.184899",
+    "hypothesis": "価格を2800円に調整して売上向上",
+    "target": "週間売上20000円",
+    "action_plan": "価格を2800円に設定し商品説明を改善",
+    "duration_days": 7,
+    "daily_data": {
+      "2025-06-02": {
+        "date": "2025-06-02",
+        "sales": 3200.0,
+        "actions_taken": "価格2800円で出品、商品説明改善",
+        "observations": "反応良好",
+        "logged_at": "2025-06-02T20:03:17.579645"
+      }
+    },
+    "status": "active"
+  },
+  "auto_insights": []
+}

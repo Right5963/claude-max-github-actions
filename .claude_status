@@ -1,0 +1,21 @@
+{
+  "session_id": "20250602_20",
+  "session_start": "20:14",
+  "time_remaining": "4:59:59",
+  "models": {
+    "opus": {
+      "requests": 0,
+      "max_requests": 200,
+      "usage_percentage": 0.0,
+      "tokens": 0,
+      "status": "\ud83d\udfe2 SAFE"
+    },
+    "sonnet": {
+      "requests": 0,
+      "max_requests": 300,
+      "usage_percentage": 0.0,
+      "tokens": 0,
+      "status": "\ud83d\udfe2 SAFE"
+    }
+  }
+}

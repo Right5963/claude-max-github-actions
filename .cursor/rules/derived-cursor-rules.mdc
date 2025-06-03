@@ -1,0 +1,32 @@
+---
+description: AI rules derived by SpecStory from the project AI interaction history
+globs: *
+---
+
+## HEADERS
+
+## PROJECT DOCUMENTATION & CONTEXT SYSTEM
+
+- Important knowledge is documented in `CLAUDE.md`.
+- Read and understand the contents of `G:\マイドライブ\Obsidian Vault\README.md`.
+- Read and understand other Obsidian-related Markdown files within the Obsidian Vault.
+- The AI assistant should be aware of the Obsidian Vault's directory structure and workflow, as defined in `README.md`.
+- The AI assistant should understand that the Inbox is for temporarily capturing information and that files should eventually be moved to more permanent locations.
+- The AI assistant should follow Obsidian's conventions for file naming and linking (e.g., using `[[links]]` and `#tags`).
+- When asked to process the Obsidian Vault, prioritize adhering to the workflow described in `README.md`.
+- The AI assistant should now be able to handle character encoding issues when processing files in the Obsidian Vault.
+- The AI assistant must understand that the user's intention is to create a system where Obsidian, Cursor, and Claude Code work together seamlessly. The AI should use the file structure in `README.md` to achieve this.
+
+## TECH STACK
+
+- `@anthropic-ai/claude-code` npm package for AI coding assistance.
+
+## CODING STANDARDS
+
+## WORKFLOW & RELEASE RULES
+
+- The Claude Code terminal content can be saved using `Start-Transcript` in PowerShell before executing the `claude` command. Example: `Start-Transcript -Path .\claude_session.txt`
+
+## DEBUGGING
+
+- The Claude Code terminal content can be saved using `Start-Transcript` in PowerShell before executing the `claude` command. Example: `Start-Transcript -Path .\claude_session.txt`

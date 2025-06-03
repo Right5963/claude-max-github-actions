@@ -1,0 +1,80 @@
+# ログファイル
+*.log
+session_monitor.log
+monitor.log
+
+# 一時ファイル
+*.pid
+.monitor.pid
+.session_monitor.pid
+.health_check.pid
+.daily_report.pid
+.obsidian_sync.pid
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# セッションデータ（大量のため除外）
+sessions/
+.session_*
+
+# 自動化システム
+auto_systems_logs/
+.auto_*
+
+# 状態ファイル
+.obsidian_sync_state.json
+system_health_report.json
+
+# キャッシュ
+obsidian-cache/
+civitai_cache/
+yahoo_images_*/
+valuable_systems_output/
+
+# 結果・出力ファイル
+results/
+daily_reports/
+image_evaluations/
+manual_test_project/
+rich_test_project/
+test_wildcard_input/
+
+# データベース
+*.db
+claude_usage.db
+thought_evolution.db
+mcp_memory.db
+
+# JSON出力（設定以外）
+*_output.json
+*_result.json
+*_analysis.json
+*_popularity_*.json
+yahoo_analysis_*.json
+yahoo_sales_data.json
+yahoo_scraper_simple_result.json
+
+# バックアップ
+*.backup.*
+
+# 一時的なマウント
+obsidian-vault
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+
+# Gドライブの絶対パス（WSL環境で問題となる）
+G:/*
+**/G:/*
+G:\*
+
+# Git自動コミット状態ファイル
+.smart_git_state.json

@@ -1,0 +1,151 @@
+[
+  {
+    "filename": "yahoo_auction_real_automation.py",
+    "mock_indicators": {},
+    "functionality": {
+      "file_size": 4907,
+      "line_count": 147,
+      "has_real_apis": true,
+      "has_file_io": true,
+      "has_data_processing": true,
+      "has_user_input": false,
+      "complexity_score": 2,
+      "reality_score": 100
+    },
+    "execution": {
+      "executable": true,
+      "help_available": true
+    },
+    "verdict": "✅ 高実用性",
+    "reality_score": 100
+  },
+  {
+    "filename": "one_click_automation.py",
+    "mock_indicators": {},
+    "functionality": {
+      "file_size": 2609,
+      "line_count": 93,
+      "has_real_apis": true,
+      "has_file_io": false,
+      "has_data_processing": false,
+      "has_user_input": false,
+      "complexity_score": 2,
+      "reality_score": 55
+    },
+    "execution": {
+      "executable": true,
+      "help_available": true
+    },
+    "verdict": "⚠️ 中程度の実用性",
+    "reality_score": 55
+  },
+  {
+    "filename": "popularity_research.py",
+    "mock_indicators": {},
+    "functionality": {
+      "file_size": 7321,
+      "line_count": 266,
+      "has_real_apis": false,
+      "has_file_io": true,
+      "has_data_processing": false,
+      "has_user_input": false,
+      "complexity_score": 8,
+      "reality_score": 55
+    },
+    "execution": {
+      "executable": true,
+      "help_available": true
+    },
+    "verdict": "⚠️ 中程度の実用性",
+    "reality_score": 55
+  },
+  {
+    "filename": "thinking_core_simple.py",
+    "mock_indicators": {},
+    "functionality": {
+      "file_size": 4311,
+      "line_count": 168,
+      "has_real_apis": false,
+      "has_file_io": true,
+      "has_data_processing": true,
+      "has_user_input": false,
+      "complexity_score": 9,
+      "reality_score": 80
+    },
+    "execution": {
+      "executable": true,
+      "help_available": true
+    },
+    "verdict": "✅ 高実用性",
+    "reality_score": 80
+  },
+  {
+    "filename": "hybrid_intelligence.py",
+    "mock_indicators": {
+      "mock|sample|demo|fake|test|simulate|example": 14,
+      "サンプル|テスト|デモ|模擬|仮": 9,
+      "print.*\".*デモ.*\"|print.*\".*demo.*\"": 1
+    },
+    "functionality": {
+      "file_size": 12981,
+      "line_count": 417,
+      "has_real_apis": true,
+      "has_file_io": true,
+      "has_data_processing": true,
+      "has_user_input": false,
+      "complexity_score": 15,
+      "reality_score": 110
+    },
+    "execution": {
+      "executable": true,
+      "help_available": true
+    },
+    "verdict": "❌ モック中心（実用性低）",
+    "reality_score": 110
+  },
+  {
+    "filename": "ai_insight_evaluator.py",
+    "mock_indicators": {
+      "サンプル|テスト|デモ|模擬|仮": 2
+    },
+    "functionality": {
+      "file_size": 3954,
+      "line_count": 180,
+      "has_real_apis": true,
+      "has_file_io": true,
+      "has_data_processing": true,
+      "has_user_input": false,
+      "complexity_score": 4,
+      "reality_score": 110
+    },
+    "execution": {
+      "executable": true,
+      "help_available": true
+    },
+    "verdict": "✅ 高実用性",
+    "reality_score": 110
+  },
+  {
+    "filename": "competitor_analyzer_unified.py",
+    "mock_indicators": {
+      "mock|sample|demo|fake|test|simulate|example": 1,
+      "サンプル|テスト|デモ|模擬|仮": 2
+    },
+    "functionality": {
+      "file_size": 6346,
+      "line_count": 236,
+      "has_real_apis": false,
+      "has_file_io": true,
+      "has_data_processing": true,
+      "has_user_input": false,
+      "complexity_score": 5,
+      "reality_score": 80
+    },
+    "execution": {
+      "executable": true,
+      "help_available": true
+    },
+    "verdict": "✅ 高実用性",
+    "reality_score": 80
+  }
+]

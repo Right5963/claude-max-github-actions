@@ -1,0 +1,13 @@
+#!/bin/bash
+# Claude起動ラッパー - 重要リマインダー付き
+
+# 作業ディレクトリに移動
+cd "/mnt/c/Claude Code/tool" 2>/dev/null || cd "$HOME"
+
+# 重要リマインダーを表示
+if [ -f "/mnt/c/Claude Code/tool/claude_startup_reminders.sh" ]; then
+    /mnt/c/Claude Code/tool/claude_startup_reminders.sh
+fi
+
+# 実際のclaudeコマンドを実行
+claude "$@"

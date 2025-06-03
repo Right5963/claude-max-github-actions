@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-06-03T03:14:07.085373",
+  "results": [
+    {
+      "name": "one_click_automation.py",
+      "claims": [
+        "完全自動化",
+        "ワンクリック実行",
+        "AI統合"
+      ],
+      "reality": {
+        "executable": true,
+        "output_lines": 31,
+        "input_calls": 0,
+        "auto_executable": true
+      },
+      "verdict": "✅ 完全自動実行可能"
+    },
+    {
+      "name": "popularity_research.py",
+      "claims": [
+        "市場の本質分析",
+        "深い洞察",
+        "実践的アドバイス"
+      ],
+      "reality": {
+        "executable": true,
+        "output_lines": 21,
+        "input_calls": 0,
+        "auto_executable": true
+      },
+      "verdict": "✅ 完全自動実行可能"
+    },
+    {
+      "name": "thinking_core_simple.py",
+      "claims": [
+        "思考の深掘り",
+        "思い込み発見",
+        "73行の簡潔実装"
+      ],
+      "reality": {
+        "executable": true,
+        "output_lines": 22,
+        "input_calls": 0,
+        "auto_executable": true
+      },
+      "verdict": "✅ 完全自動実行可能"
+    },
+    {
+      "name": "hybrid_intelligence.py",
+      "claims": [
+        "人間×AI融合",
+        "自動洞察生成",
+        "継続的改善"
+      ],
+      "reality": {
+        "executable": true,
+        "output_lines": 14,
+        "input_calls": 0,
+        "auto_executable": true
+      },
+      "verdict": "✅ 完全自動実行可能"
+    },
+    {
+      "name": "ai_insight_evaluator.py",
+      "claims": [
+        "AI洞察評価",
+        "実用性判定",
+        "戦略提案"
+      ],
+      "reality": {
+        "executable": true,
+        "output_lines": 21,
+        "input_calls": 0,
+        "auto_executable": true
+      },
+      "verdict": "✅ 完全自動実行可能"
+    }
+  ],
+  "summary": {
+    "fully_auto": 5,
+    "manual_needed": 0,
+    "not_working": 0
+  }
+}

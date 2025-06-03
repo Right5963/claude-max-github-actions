@@ -1,0 +1,39 @@
+#!/bin/bash
+# Claude with Auto Session Monitor
+# ================================
+# Claudeを起動する際に自動的にセッション監視も開始
+
+TOOL_DIR="/mnt/c/Claude Code/tool"
+cd "$TOOL_DIR"
+
+# 自動化レベルに基づいてシステムを起動
+if [ -f .auto_level_config ]; then
+    level=$(cat .auto_level_config)
+    echo "🎛️ 自動化レベル: $level"
+else
+    level="minimal"
+    echo "🎛️ 自動化レベル: minimal（デフォルト）"
+fi
+
+# 自動化システムを起動
+./auto_level_manager.sh start
+
+echo ""
+
+# 前回のセッション情報を表示
+if [ -f "current_session.json" ]; then
+    echo "📊 前回のセッション情報:"
+    python3 session_manager_simple.py status
+    echo ""
+fi
+
+# Simple First原則のリマインダー（CLAUDE.mdより）
+echo "🚨 Simple First 原則"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "73行のシンプルツール > 1,200行の複雑システム"
+echo "技術的可能性に酔うな、実用性を追求せよ"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
+
+# Claudeを起動
+exec claude "$@"

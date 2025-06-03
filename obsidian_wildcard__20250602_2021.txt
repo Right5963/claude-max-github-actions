@@ -1,0 +1,17 @@
+# Obsidian辞典ベース: 
+# 生成: 2025-06-02 20:21:47.752138
+
+# __character__
+1girl
+smile
+cute
+
+# __style__
+detailed
+anime style
+
+# __quality__
+8k
+masterpiece
+best quality
+

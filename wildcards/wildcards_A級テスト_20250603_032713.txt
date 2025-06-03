@@ -1,0 +1,34 @@
+# Wildcard for A級テスト
+# Generated: 2025-06-03 03:27:13
+# Total tags: 15
+
+# Main template:
+# 1girl, solo, {characterface}, {characterbody}, {clothing}, {poseemotion}, {angle}, {backgrounds}, {style}
+
+# CHARACTERFACE
+blonde hair
+blue eyes
+long hair
+
+# CLOTHING
+school uniform
+pink dress
+
+# POSEEMOTION
+smile
+
+# STYLE
+anime girl
+digital art
+
+# QUALITY
+masterpiece
+best quality
+detailed
+high resolution
+
+# GENERAL
+cute
+beautiful
+kawaii
+

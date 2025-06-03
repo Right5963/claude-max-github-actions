@@ -1,0 +1,16 @@
+=== アニメ 美少女 ポスター 自動生成結果 ===
+
+生成日時: 2025-06-02 18:50
+
+【推奨プロンプト】
+1. __Characters__, __Styles__, __Quality__, アニメ 美少女 ポスター
+2. 1girl, __Styles__, アニメ 美少女 ポスター, detailed background, __Quality__
+3. アニメ 美少女 ポスター, poster art, __Quality__, masterpiece
+
+【ワイルドカード】
+yahoo_auto_20250602_1850.txt
+
+【次のステップ】
+1. Stable Diffusion WebUIのwildcardsフォルダにコピー
+2. Batch count: 100 に設定
+3. 上記プロンプトで生成開始

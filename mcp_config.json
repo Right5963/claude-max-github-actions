@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem"],
+      "env": {
+        "ALLOWED_DIRECTORIES": "G:\\マイドライブ\\Obsidian Vault,C:\\ObsidianVault,/mnt/g/マイドライブ/Obsidian Vault"
+      }
+    },
+    "gdrive": {
+      "command": "npx", 
+      "args": ["-y", "@modelcontextprotocol/server-gdrive"],
+      "env": {
+        "GDRIVE_ROOT": "Obsidian Vault"
+      }
+    }
+  }
+}
