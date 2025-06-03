@@ -41,7 +41,7 @@
       ]
     },
     "documentation": {
-      "count": 4,
+      "count": 5,
       "examples": [
         {
           "commit": "640e2a0e",
@@ -62,11 +62,16 @@
           "commit": "3145954e",
           "subject": "Auto-commit: Add configuration (598 new)",
           "date": "Wed Jun 4 06:43:29 2025 +0900"
+        },
+        {
+          "commit": "c15c8b22",
+          "subject": "Auto-commit: Remove and modify Python scripts (8 new, 4 modified, 292 deleted)",
+          "date": "Wed Jun 4 07:02:59 2025 +0900"
         }
       ]
     },
     "automation": {
-      "count": 4,
+      "count": 5,
       "examples": [
         {
           "commit": "640e2a0e",
@@ -87,36 +92,56 @@
           "commit": "3145954e",
           "subject": "Auto-commit: Add configuration (598 new)",
           "date": "Wed Jun 4 06:43:29 2025 +0900"
+        },
+        {
+          "commit": "c15c8b22",
+          "subject": "Auto-commit: Remove and modify Python scripts (8 new, 4 modified, 292 deleted)",
+          "date": "Wed Jun 4 07:02:59 2025 +0900"
         }
       ]
     },
     "feature_addition": {
-      "count": 1,
+      "count": 2,
       "examples": [
         {
           "commit": "3145954e",
           "subject": "Auto-commit: Add configuration (598 new)",
           "date": "Wed Jun 4 06:43:29 2025 +0900"
+        },
+        {
+          "commit": "c15c8b22",
+          "subject": "Auto-commit: Remove and modify Python scripts (8 new, 4 modified, 292 deleted)",
+          "date": "Wed Jun 4 07:02:59 2025 +0900"
         }
       ]
     },
     "python_development": {
-      "count": 1,
+      "count": 2,
       "examples": [
         {
           "commit": "3145954e",
           "subject": "Auto-commit: Add configuration (598 new)",
           "date": "Wed Jun 4 06:43:29 2025 +0900"
+        },
+        {
+          "commit": "c15c8b22",
+          "subject": "Auto-commit: Remove and modify Python scripts (8 new, 4 modified, 292 deleted)",
+          "date": "Wed Jun 4 07:02:59 2025 +0900"
         }
       ]
     },
     "configuration": {
-      "count": 1,
+      "count": 2,
       "examples": [
         {
           "commit": "3145954e",
           "subject": "Auto-commit: Add configuration (598 new)",
           "date": "Wed Jun 4 06:43:29 2025 +0900"
+        },
+        {
+          "commit": "c15c8b22",
+          "subject": "Auto-commit: Remove and modify Python scripts (8 new, 4 modified, 292 deleted)",
+          "date": "Wed Jun 4 07:02:59 2025 +0900"
         }
       ]
     },
@@ -127,6 +152,16 @@
           "commit": "3145954e",
           "subject": "Auto-commit: Add configuration (598 new)",
           "date": "Wed Jun 4 06:43:29 2025 +0900"
+        }
+      ]
+    },
+    "bug_fix": {
+      "count": 1,
+      "examples": [
+        {
+          "commit": "c15c8b22",
+          "subject": "Auto-commit: Remove and modify Python scripts (8 new, 4 modified, 292 deleted)",
+          "date": "Wed Jun 4 07:02:59 2025 +0900"
         }
       ]
     }
@@ -155,11 +190,25 @@
         "documentation"
       ],
       "date": "Wed Jun 4 06:43:29 2025 +0900"
+    },
+    "c15c8b22": {
+      "elements": [
+        "大規模変更 (16ファイル) - プロジェクト構造の理解が進んだ"
+      ],
+      "patterns": [
+        "feature_addition",
+        "python_development",
+        "automation",
+        "bug_fix",
+        "documentation",
+        "configuration"
+      ],
+      "date": "Wed Jun 4 07:02:59 2025 +0900"
     }
   },
   "connections": {},
   "stats": {
-    "total_commits": 4,
-    "patterns_identified": 18
+    "total_commits": 5,
+    "patterns_identified": 24
   }
 }

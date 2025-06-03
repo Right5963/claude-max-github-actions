@@ -143,7 +143,8 @@
       "Bash(git commit:*)",
       "Bash(git config:*)",
       "Bash(pip3 install:*)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "Bash(time python3:*)"
     ],
     "deny": []
   },
