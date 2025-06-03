@@ -83,6 +83,13 @@ start_systems() {
                 echo $! > .obsidian_sync.pid
                 echo "  ✓ Obsidian同期起動（15分ごと）"
             fi
+            
+            # Git自動コミット（30分ごと）
+            if [ ! -f .git_auto_commit.pid ] || ! kill -0 $(cat .git_auto_commit.pid 2>/dev/null) 2>&1; then
+                nohup python3 smart_git_auto_commit.py daemon > "$LOG_DIR/git_auto_commit.log" 2>&1 &
+                echo $! > .git_auto_commit.pid
+                echo "  ✓ Git自動コミット起動（30分ごと）"
+            fi
             ;;
             
         minimal|*)
@@ -147,6 +154,11 @@ show_status() {
     if [ -f .obsidian_sync.pid ] && kill -0 $(cat .obsidian_sync.pid 2>/dev/null) 2>&1; then
         echo "  ✅ Obsidian同期 (PID: $(cat .obsidian_sync.pid))"
     fi
+    
+    # Git自動コミット
+    if [ -f .git_auto_commit.pid ] && kill -0 $(cat .git_auto_commit.pid 2>/dev/null) 2>&1; then
+        echo "  ✅ Git自動コミット (PID: $(cat .git_auto_commit.pid))"
+    fi
 }
 
 # ヘルプ
@@ -164,7 +176,7 @@ show_help() {
 レベル説明:
   minimal   - セッション監視のみ（デフォルト）
   balanced  - セッション監視 + ヘルスチェック + 日次レポート
-  full      - 全機能（Obsidian同期含む）
+  full      - 全機能（Obsidian同期 + Git自動コミット含む）
 
 例:
   $0 level balanced  # バランスモードに設定

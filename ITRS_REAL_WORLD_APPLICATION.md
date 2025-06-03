@@ -91,7 +91,8 @@ def direct_scraping_approach():
 ```python
 # Yahoo provides developer APIs
 def yahoo_api_approach():
-    api_key = "your_yahoo_api_key"
+    # Configure your Yahoo API key in environment
+    api_key = os.environ.get('YAHOO_API_KEY')
     
     # Search auctions via API
     search_response = requests.get(

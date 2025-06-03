@@ -139,7 +139,11 @@
       "Bash(./auto_level_manager.sh:*)",
       "Bash(./git_init_helper.sh)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git config:*)",
+      "Bash(pip3 install:*)",
+      "Bash(sed:*)"
     ],
     "deny": []
   },

@@ -311,6 +311,20 @@ class SmartGitAutoCommit:
         status = "✅" if success else "❌"
         print(f"{status} {message}")
         
+        # Git-Knowledge統合（コミット成功時）
+        if success and "Committed" in message:
+            try:
+                from git_knowledge_connector import GitKnowledgeConnector
+                print("")
+                print("🧠 自動Git-Knowledge統合開始...")
+                
+                connector = GitKnowledgeConnector()
+                connector.process_commit("HEAD")
+                print("🎉 AI最適化知識ノート自動生成完了")
+                
+            except Exception as e:
+                print(f"⚠️ Git-Knowledge統合スキップ: {str(e)[:50]}...")
+        
         return success
 
 def main():

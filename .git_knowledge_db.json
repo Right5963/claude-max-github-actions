@@ -1,0 +1,101 @@
+{
+  "patterns": {
+    "integration": {
+      "count": 3,
+      "examples": [
+        {
+          "commit": "640e2a0e",
+          "subject": "Initial commit: Claude Code automation environment with smart Git auto-commit",
+          "date": "Wed Jun 4 06:01:08 2025 +0900"
+        },
+        {
+          "commit": "640e2a0e",
+          "subject": "Initial commit: Claude Code automation environment with smart Git auto-commit",
+          "date": "Wed Jun 4 06:01:08 2025 +0900"
+        },
+        {
+          "commit": "640e2a0e",
+          "subject": "Initial commit: Claude Code automation environment with smart Git auto-commit",
+          "date": "Wed Jun 4 06:01:08 2025 +0900"
+        }
+      ]
+    },
+    "security": {
+      "count": 3,
+      "examples": [
+        {
+          "commit": "640e2a0e",
+          "subject": "Initial commit: Claude Code automation environment with smart Git auto-commit",
+          "date": "Wed Jun 4 06:01:08 2025 +0900"
+        },
+        {
+          "commit": "640e2a0e",
+          "subject": "Initial commit: Claude Code automation environment with smart Git auto-commit",
+          "date": "Wed Jun 4 06:01:08 2025 +0900"
+        },
+        {
+          "commit": "640e2a0e",
+          "subject": "Initial commit: Claude Code automation environment with smart Git auto-commit",
+          "date": "Wed Jun 4 06:01:08 2025 +0900"
+        }
+      ]
+    },
+    "documentation": {
+      "count": 3,
+      "examples": [
+        {
+          "commit": "640e2a0e",
+          "subject": "Initial commit: Claude Code automation environment with smart Git auto-commit",
+          "date": "Wed Jun 4 06:01:08 2025 +0900"
+        },
+        {
+          "commit": "640e2a0e",
+          "subject": "Initial commit: Claude Code automation environment with smart Git auto-commit",
+          "date": "Wed Jun 4 06:01:08 2025 +0900"
+        },
+        {
+          "commit": "640e2a0e",
+          "subject": "Initial commit: Claude Code automation environment with smart Git auto-commit",
+          "date": "Wed Jun 4 06:01:08 2025 +0900"
+        }
+      ]
+    },
+    "automation": {
+      "count": 3,
+      "examples": [
+        {
+          "commit": "640e2a0e",
+          "subject": "Initial commit: Claude Code automation environment with smart Git auto-commit",
+          "date": "Wed Jun 4 06:01:08 2025 +0900"
+        },
+        {
+          "commit": "640e2a0e",
+          "subject": "Initial commit: Claude Code automation environment with smart Git auto-commit",
+          "date": "Wed Jun 4 06:01:08 2025 +0900"
+        },
+        {
+          "commit": "640e2a0e",
+          "subject": "Initial commit: Claude Code automation environment with smart Git auto-commit",
+          "date": "Wed Jun 4 06:01:08 2025 +0900"
+        }
+      ]
+    }
+  },
+  "learnings": {
+    "640e2a0e": {
+      "elements": [],
+      "patterns": [
+        "security",
+        "automation",
+        "integration",
+        "documentation"
+      ],
+      "date": "Wed Jun 4 06:01:08 2025 +0900"
+    }
+  },
+  "connections": {},
+  "stats": {
+    "total_commits": 3,
+    "patterns_identified": 12
+  }
+}
