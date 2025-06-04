@@ -19,7 +19,20 @@ call_mcp_json() {
     local request="{\"method\": \"tools/call\", \"params\": {\"name\": \"$tool_name\", \"arguments\": $args_json}}"
     
     cd "$TOOL_DIR"
-    echo "$request" | python3 "$server_script" 2>/dev/null | jq -r '.content[0].text // .error // .'
+    echo "$request" | python3 "$server_script" 2>/dev/null | python3 -c "
+import sys, json
+try:
+    data = json.load(sys.stdin)
+    if 'content' in data and len(data['content']) > 0:
+        print(data['content'][0].get('text', ''))
+    elif 'error' in data:
+        print(data['error'])
+    else:
+        print(json.dumps(data, indent=2))
+except:
+    for line in sys.stdin:
+        print(line.rstrip())
+"
 }
 
 # 使用方法表示
@@ -80,7 +93,7 @@ case "$MCP_TOOL" in
         
         echo "🔍 ファイル開発コンテキスト分析中: $FILE_PATH"
         result=$(call_mcp_json "mcp_dev_efficiency.py" "dev_file_context" "$ARGS_JSON")
-        echo "$result" | jq . 2>/dev/null || echo "$result"
+        echo "$result" | python3 -c "import sys, json; [print(json.dumps(json.loads(line), indent=2)) if line.strip() and line.strip().startswith('{') else print(line.rstrip()) for line in sys.stdin]" 2>/dev/null || echo "$result"
         ;;
     
     "dev-patterns")
@@ -89,7 +102,7 @@ case "$MCP_TOOL" in
         
         echo "📊 開発パターン検出中 (過去${DAYS}日間)..."
         result=$(call_mcp_json "mcp_dev_efficiency.py" "dev_pattern_detect" "$ARGS_JSON")
-        echo "$result" | jq . 2>/dev/null || echo "$result"
+        echo "$result" | python3 -c "import sys, json; [print(json.dumps(json.loads(line), indent=2)) if line.strip() and line.strip().startswith('{') else print(line.rstrip()) for line in sys.stdin]" 2>/dev/null || echo "$result"
         ;;
     
     "dev-optimize")

@@ -127,6 +127,9 @@ python3 auto_research_system.py docs             # 公式ドキュメント発�
 ./mcp_revolutionary_bridge.sh dev-quick "commit message"  # スマートコミット
 ./mcp_revolutionary_bridge.sh dev-context "file.py"       # ファイル分析
 ./mcp_revolutionary_bridge.sh obsidian-search "query"     # Obsidian検索
+
+# 🔧 2025-06-04 改善完了: jq依存性除去 
+# Python-only JSON処理に変更、外部依存なしで全環境対応
 ```
 
 **自動発見の成果:**
