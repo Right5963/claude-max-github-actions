@@ -1,0 +1,79 @@
+{
+  "timestamp": "2025-06-04T09:45:11.167983",
+  "custom_server": true,
+  "essential_tools": {
+    "installed": [
+      "mcp-commit-story",
+      "fastmcp",
+      "mcp-code-analyzer"
+    ],
+    "failed": []
+  },
+  "dashboard": {
+    "timestamp": "2025-06-04T09:45:10.912858",
+    "total_mcps": 13,
+    "categories": {
+      "Development": {
+        "count": 3,
+        "tools": [
+          "dev-efficiency",
+          "mcp-commit-story",
+          "mcp-code-analyzer"
+        ],
+        "coverage": "excellent"
+      },
+      "File Operations": {
+        "count": 3,
+        "tools": [
+          "filesystem",
+          "filesystem-gdrive",
+          "filesystem-mcp"
+        ],
+        "coverage": "excellent"
+      },
+      "AI Integration": {
+        "count": 0,
+        "tools": [],
+        "coverage": "missing"
+      },
+      "Automation": {
+        "count": 0,
+        "tools": [],
+        "coverage": "missing"
+      },
+      "Knowledge": {
+        "count": 3,
+        "tools": [
+          "obsidian",
+          "memory",
+          "note-api"
+        ],
+        "coverage": "excellent"
+      },
+      "Other": {
+        "count": 4,
+        "tools": [
+          "desktop-commander",
+          "playwright",
+          "sqlite",
+          "fastmcp"
+        ],
+        "coverage": "excellent"
+      }
+    },
+    "efficiency_score": 65,
+    "recommendations": [
+      {
+        "priority": "high",
+        "action": "Add ai integration MCP tools",
+        "reason": "Missing essential ai integration capabilities"
+      },
+      {
+        "priority": "high",
+        "action": "Add automation MCP tools",
+        "reason": "Missing essential automation capabilities"
+      }
+    ]
+  },
+  "integration_success": true
+}

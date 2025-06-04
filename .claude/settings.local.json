@@ -144,7 +144,10 @@
       "Bash(git config:*)",
       "Bash(pip3 install:*)",
       "Bash(sed:*)",
-      "Bash(time python3:*)"
+      "Bash(time python3:*)",
+      "Bash(./git-daily status)",
+      "Bash(time git status)",
+      "Bash(time ./git-daily status)"
     ],
     "deny": []
   },

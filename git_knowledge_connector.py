@@ -225,9 +225,26 @@ class GitKnowledgeConnector:
         return '\n'.join(formatted)
     
     def _format_learnings(self, learnings):
-        """学習要素のフォーマット"""
+        """学習要素のフォーマット（高度知識抽出統合）"""
         if not learnings:
-            return "- 継続的な開発経験の蓄積"
+            # 高度知識抽出を実行
+            try:
+                from advanced_knowledge_extractor import AdvancedKnowledgeExtractor
+                extractor = AdvancedKnowledgeExtractor()
+                analysis = extractor.analyze_commit_changes("HEAD")
+                
+                if analysis['insights']:
+                    # 実用的な洞察を学習要素として使用
+                    formatted = []
+                    for insight in analysis['insights'][:3]:  # 最大3個
+                        formatted.append(f"- 💡 {insight}")
+                    return '\n'.join(formatted)
+                
+            except Exception as e:
+                print(f"⚠️ 高度知識抽出エラー: {e}")
+            
+            # フォールバック: より具体的なデフォルト
+            return "- 💡 開発プロセスの改善と知識の蓄積"
         
         formatted = []
         for learning in learnings:
