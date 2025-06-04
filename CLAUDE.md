@@ -130,6 +130,13 @@ python3 auto_research_system.py docs             # 公式ドキュメント発�
 
 # 🔧 2025-06-04 改善完了: jq依存性除去 
 # Python-only JSON処理に変更、外部依存なしで全環境対応
+
+# 🎯 2025-06-04 重要システム完成: 「問題点はないか？しっかり考えて」自動化
+# ✅ 開発後の自動レビュー・問題検出・修正提案システム完成
+# ✅ Simple First 正しい実装: 外部1コマンド、内部高機能
+# ✅ 強制知識参照: CLAUDE.md重要原則を毎回表示し、誤解防止
+# ✅ Obsidian知識共有の根本問題解決
+python3 development_review_system.py [file]  # 完全自動レビュー
 ```
 
 **自動発見の成果:**
