@@ -1,0 +1,59 @@
+name: Claude Code Action - Obsidian File Organization
+
+on:
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      action_request:
+        description: 'Request for Claude'
+        required: true
+        default: 'Organize Obsidian files in knowledge network structure'
+
+jobs:
+  claude-action:
+    if: github.event.issue && contains(github.event.comment.body, '@claude') || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Claude Code Action
+      uses: anthropics/claude-code-action@beta
+      with:
+        anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+        trigger_phrase: "@claude"
+        custom_instructions: |
+          You are helping to organize scattered Obsidian markdown files into a proper knowledge network structure.
+          
+          Current task: Organize files in G:\マイドライブ\Obsidian Vault
+          
+          Target structure:
+          - 01_Business/ - Business strategy and revenue models
+          - 02_Research/ - Market analysis and research 
+          - 03_Technical/ - Technical implementation and systems
+          - 04_Daily/ - Daily records and session logs
+          - 90_Index/ - MOC (Map of Content) files
+          - 99_Meta/ - Meta information, tests, archives
+          
+          For each file:
+          1. Read content to understand purpose
+          2. Categorize based on content themes
+          3. Add appropriate tags: #Business #Research #Technical #Daily #Meta
+          4. Create [[links]] to related files
+          5. Update or create MOC entries
+          
+          Focus on creating a functional knowledge network, not just moving files.
+        
+    - name: Create Issue Comment
+      if: github.event.issue
+      uses: actions/github-script@v7
+      with:
+        script: |
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: '✅ Claude Code Action executed! Check the created PR for Obsidian file organization results.'
+          })
