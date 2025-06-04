@@ -17,6 +17,7 @@ on:
         description: 'リサーチクエリ'
         required: true
         type: string
+        default: ''
       save_to_obsidian:
         description: 'Obsidianに保存'
         required: false
