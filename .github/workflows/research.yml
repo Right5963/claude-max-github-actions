@@ -13,54 +13,68 @@ jobs:
     runs-on: self-hosted
     
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-    
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-    
-    - name: Install dependencies
+    - name: Check Environment
       run: |
-        pip install -r requirements.txt
+        echo "🚀 Starting research for: ${{ github.event.inputs.research_query }}"
+        echo "📍 Current directory: $(pwd)"
+        echo "🖥️ System info:"
+        uname -a
+        echo "🐍 Python version:"
+        python3 --version || python --version
+        echo "📦 pip version:"
+        pip3 --version || pip --version
     
-    - name: Run Research with Perplexity
+    - name: Test Internet Connection
+      run: |
+        echo "🌐 Testing internet connection..."
+        curl -I https://github.com || echo "Failed to connect to GitHub"
+        curl -I https://api.perplexity.ai || echo "Failed to connect to Perplexity"
+        curl -I https://api.anthropic.com || echo "Failed to connect to Anthropic"
+    
+    - name: Simple Test Script
+      run: |
+        echo "Creating test script..."
+        cat > test_apis.py << 'EOF'
+        import os
+        import sys
+
+        print("🔑 Checking API Keys...")
+        
+        perplexity_key = os.environ.get('PERPLEXITY_API_KEY', '')
+        anthropic_key = os.environ.get('ANTHROPIC_API_KEY', '')
+        
+        print(f"PERPLEXITY_API_KEY: {'✅ Set' if perplexity_key else '❌ Not set'}")
+        print(f"ANTHROPIC_API_KEY: {'✅ Set' if anthropic_key else '❌ Not set'}")
+        
+        if perplexity_key:
+            print(f"  Length: {len(perplexity_key)} characters")
+            print(f"  Starts with: {perplexity_key[:10]}...")
+        
+        if anthropic_key:
+            print(f"  Length: {len(anthropic_key)} characters")
+            print(f"  Starts with: {anthropic_key[:10]}...")
+        
+        print(f"\n📝 Research Query: {sys.argv[1] if len(sys.argv) > 1 else 'No query provided'}")
+        EOF
+        
+        python3 test_apis.py "${{ github.event.inputs.research_query }}"
       env:
         PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
-      run: |
-        python research.py "${{ github.event.inputs.research_query }}"
-    
-    - name: Generate Report with Claude
-      env:
         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    
+    - name: Create Simple Report
       run: |
-        python generate_report.py
-    
-    - name: Upload Research Results
-      uses: actions/upload-artifact@v3
-      with:
-        name: research-report
-        path: |
-          output/research_results.json
-          output/research_report.md
-          output/research_report.pdf
-    
-    - name: Create Issue with Results
-      uses: actions/github-script@v6
-      with:
-        script: |
-          const fs = require('fs');
-          const reportPath = 'output/research_report.md';
-          
-          if (fs.existsSync(reportPath)) {
-            const report = fs.readFileSync(reportPath, 'utf8');
-            
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: `Research Report: ${{ github.event.inputs.research_query }}`,
-              body: report,
-              labels: ['research', 'automated']
-            });
-          }
+        mkdir -p output
+        echo "# Research Report" > output/report.md
+        echo "## Query: ${{ github.event.inputs.research_query }}" >> output/report.md
+        echo "## Timestamp: $(date)" >> output/report.md
+        echo "" >> output/report.md
+        echo "This is a test report to verify the workflow is working." >> output/report.md
+        echo "" >> output/report.md
+        echo "### Next Steps:" >> output/report.md
+        echo "1. Fix internet connectivity issues" >> output/report.md
+        echo "2. Install required Python packages" >> output/report.md
+        echo "3. Run actual research scripts" >> output/report.md
+        
+        echo "✅ Report created at: output/report.md"
+        cat output/report.md
