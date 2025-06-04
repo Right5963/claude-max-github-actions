@@ -1,0 +1,4 @@
+requests
+anthropic
+reportlab
+markdown2
