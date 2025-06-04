@@ -244,10 +244,27 @@ def main():
     print("="*60)
     print(result["integrated_report"])
     
+    # 結果をMarkdownファイルとして保存（GitHub Actions用）
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    report = result["integrated_report"]
+    
+    # GitHub Actions用の固定ファイル名でも保存
+    with open("research_result.md", 'w', encoding='utf-8') as f:
+        f.write(report)
+        
+    # タイムスタンプ付きファイルも保存
+    result_filename = f"research_result_{timestamp}.md"
+    with open(result_filename, 'w', encoding='utf-8') as f:
+        f.write(report)
+        
+    # GitHub Artifactsディレクトリ作成
+    os.makedirs("github_artifacts", exist_ok=True)
+    artifact_filename = f"github_artifacts/research_report_{timestamp}.md"
+    with open(artifact_filename, 'w', encoding='utf-8') as f:
+        f.write(report)
+    
     # GitHub Actions環境での保存
     if is_github_actions:
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        
         # JSON結果保存
         json_filename = f"research_result_{timestamp}.json"
         integration.save_to_github_actions_artifacts(result, json_filename)
