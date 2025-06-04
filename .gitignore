@@ -77,4 +77,6 @@ G:/*
 G:\*
 
 # Git自動コミット状態ファイル
-.smart_git_state.json
+.smart_git_state.jsonactions-runner/actions-runner-linux-x64-*.tar.gz
+actions-runner/externals/
+actions-runner/bin/
