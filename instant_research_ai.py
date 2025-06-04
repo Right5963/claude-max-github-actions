@@ -44,6 +44,19 @@ class InstantResearchAI:
                 )
             """)
             
+            # 使用量追跡テーブル追加
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS usage_tracking (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    date TEXT NOT NULL,
+                    total_tokens INTEGER DEFAULT 0,
+                    daily_requests INTEGER DEFAULT 0,
+                    monthly_tokens INTEGER DEFAULT 0,
+                    monthly_requests INTEGER DEFAULT 0,
+                    UNIQUE(date)
+                )
+            """)
+            
             conn.commit()
             conn.close()
             
@@ -51,10 +64,14 @@ class InstantResearchAI:
             print(f"⚠️ データベース初期化エラー: {e}")
     
     def perplexity_search(self, query, model="llama-3.1-sonar-large-128k-online"):
-        """Perplexity APIで検索実行"""
+        """Perplexity APIで検索実行 (無料枠管理付き)"""
         if not self.api_key:
             print("❌ PERPLEXITY_API_KEY が設定されていません")
             print("設定方法: export PERPLEXITY_API_KEY=your_api_key")
+            return None
+        
+        # 無料枠チェック
+        if not self._check_free_tier_limits():
             return None
         
         print(f"🔍 Perplexity検索中: {query}")
@@ -102,10 +119,13 @@ class InstantResearchAI:
                 content = result.get("choices", [{}])[0].get("message", {}).get("content", "")
                 
                 if content:
+                    usage = result.get("usage", {})
+                    # 使用量記録
+                    self._record_usage(usage)
                     print("✅ 検索完了")
                     return {
                         "content": content,
-                        "usage": result.get("usage", {}),
+                        "usage": usage,
                         "model": model,
                         "timestamp": datetime.now().isoformat()
                     }
@@ -292,15 +312,18 @@ class InstantResearchAI:
             # 保存パス
             research_dir = f"{self.obsidian_vault}\\Research\\AI_Generated"
             
-            # PowerShellで保存
+            # PowerShellで保存（文字エンコーディング改善）
+            # 特殊文字を安全にエスケープ
+            safe_content = content.replace("'", "''").replace("`", "``")
+            
             ps_command = f"""
 $obsidianPath = "{research_dir}"
 New-Item -ItemType Directory -Force -Path $obsidianPath | Out-Null
 $content = @'
-{content}
+{safe_content}
 '@
 $filename = "{filename}"
-$content | Out-File -FilePath "$obsidianPath\\$filename" -Encoding UTF8
+[System.IO.File]::WriteAllText("$obsidianPath\\$filename", $content, [System.Text.Encoding]::UTF8)
 Write-Host "Saved: $filename"
 """
             
@@ -344,6 +367,182 @@ Write-Host "Saved: $filename"
             
         except Exception as e:
             print(f"⚠️ 履歴保存エラー: {e}")
+    
+    def _check_free_tier_limits(self):
+        """無料枠制限チェック"""
+        try:
+            today = datetime.now().strftime('%Y-%m-%d')
+            month = datetime.now().strftime('%Y-%m')
+            
+            conn = sqlite3.connect(self.research_db)
+            cursor = conn.cursor()
+            
+            # 今日の使用量取得
+            cursor.execute("""
+                SELECT daily_requests, total_tokens FROM usage_tracking 
+                WHERE date = ?
+            """, (today,))
+            
+            today_usage = cursor.fetchone()
+            daily_requests = today_usage[0] if today_usage else 0
+            daily_tokens = today_usage[1] if today_usage else 0
+            
+            # 今月の使用量取得
+            cursor.execute("""
+                SELECT SUM(monthly_requests), SUM(monthly_tokens) FROM usage_tracking 
+                WHERE date LIKE ?
+            """, (f"{month}%",))
+            
+            month_usage = cursor.fetchone()
+            monthly_requests = month_usage[0] if month_usage and month_usage[0] else 0
+            monthly_tokens = month_usage[1] if month_usage and month_usage[1] else 0
+            
+            conn.close()
+            
+            # Perplexity Pro制限 ($5/月クレジット)
+            DAILY_REQUEST_LIMIT = 100    # 1日100リクエスト (Pro想定)
+            MONTHLY_TOKEN_LIMIT = 200000  # 月間200,000トークン ($5相当)
+            MONTHLY_REQUEST_LIMIT = 2000  # 月間2000リクエスト
+            
+            # 制限チェック
+            if daily_requests >= DAILY_REQUEST_LIMIT:
+                print(f"❌ 1日のリクエスト制限に達しました ({daily_requests}/{DAILY_REQUEST_LIMIT})")
+                print("明日まで待つか、有料プランにアップグレードしてください")
+                return False
+            
+            if monthly_requests >= MONTHLY_REQUEST_LIMIT:
+                print(f"❌ 月間リクエスト制限に達しました ({monthly_requests}/{MONTHLY_REQUEST_LIMIT})")
+                print("来月まで待つか、有料プランにアップグレードしてください")
+                return False
+            
+            if monthly_tokens >= MONTHLY_TOKEN_LIMIT:
+                print(f"❌ 月間トークン制限に達しました ({monthly_tokens}/{MONTHLY_TOKEN_LIMIT})")
+                print("来月まで待つか、有料プランにアップグレードしてください")
+                return False
+            
+            # 警告表示
+            if daily_requests >= DAILY_REQUEST_LIMIT * 0.8:
+                print(f"⚠️ 1日制限の80%に達しました ({daily_requests}/{DAILY_REQUEST_LIMIT})")
+            
+            if monthly_requests >= MONTHLY_REQUEST_LIMIT * 0.8:
+                print(f"⚠️ 月間リクエスト制限の80%に達しました ({monthly_requests}/{MONTHLY_REQUEST_LIMIT})")
+            
+            if monthly_tokens >= MONTHLY_TOKEN_LIMIT * 0.8:
+                print(f"⚠️ 月間トークン制限の80%に達しました ({monthly_tokens}/{MONTHLY_TOKEN_LIMIT})")
+            
+            return True
+            
+        except Exception as e:
+            print(f"⚠️ 制限チェックエラー: {e}")
+            return True  # エラー時は実行を続行
+    
+    def _record_usage(self, usage):
+        """使用量記録"""
+        try:
+            today = datetime.now().strftime('%Y-%m-%d')
+            total_tokens = usage.get('total_tokens', 0)
+            
+            conn = sqlite3.connect(self.research_db)
+            cursor = conn.cursor()
+            
+            # 既存レコード確認
+            cursor.execute("""
+                SELECT daily_requests, total_tokens, monthly_requests, monthly_tokens 
+                FROM usage_tracking WHERE date = ?
+            """, (today,))
+            
+            existing = cursor.fetchone()
+            
+            if existing:
+                # 更新
+                cursor.execute("""
+                    UPDATE usage_tracking 
+                    SET daily_requests = daily_requests + 1,
+                        total_tokens = total_tokens + ?,
+                        monthly_requests = monthly_requests + 1,
+                        monthly_tokens = monthly_tokens + ?
+                    WHERE date = ?
+                """, (total_tokens, total_tokens, today))
+            else:
+                # 新規作成
+                cursor.execute("""
+                    INSERT INTO usage_tracking 
+                    (date, daily_requests, total_tokens, monthly_requests, monthly_tokens)
+                    VALUES (?, 1, ?, 1, ?)
+                """, (today, total_tokens, total_tokens))
+            
+            conn.commit()
+            conn.close()
+            
+        except Exception as e:
+            print(f"⚠️ 使用量記録エラー: {e}")
+    
+    def show_usage_stats(self):
+        """使用量統計表示"""
+        try:
+            today = datetime.now().strftime('%Y-%m-%d')
+            month = datetime.now().strftime('%Y-%m')
+            
+            conn = sqlite3.connect(self.research_db)
+            cursor = conn.cursor()
+            
+            # 今日の使用量
+            cursor.execute("""
+                SELECT daily_requests, total_tokens FROM usage_tracking 
+                WHERE date = ?
+            """, (today,))
+            
+            today_usage = cursor.fetchone()
+            daily_requests = today_usage[0] if today_usage else 0
+            daily_tokens = today_usage[1] if today_usage else 0
+            
+            # 今月の使用量
+            cursor.execute("""
+                SELECT SUM(monthly_requests), SUM(monthly_tokens) FROM usage_tracking 
+                WHERE date LIKE ?
+            """, (f"{month}%",))
+            
+            month_usage = cursor.fetchone()
+            monthly_requests = month_usage[0] if month_usage and month_usage[0] else 0
+            monthly_tokens = month_usage[1] if month_usage and month_usage[1] else 0
+            
+            conn.close()
+            
+            # Perplexity Pro制限
+            DAILY_REQUEST_LIMIT = 100
+            MONTHLY_TOKEN_LIMIT = 200000
+            MONTHLY_REQUEST_LIMIT = 2000
+            
+            print("📊 Perplexity API 使用量統計 (Pro プラン - $5/月)")
+            print("=" * 50)
+            print(f"📅 今日 ({today}):")
+            print(f"   リクエスト: {daily_requests}/{DAILY_REQUEST_LIMIT} ({daily_requests/DAILY_REQUEST_LIMIT*100:.1f}%)")
+            print(f"   トークン: {daily_tokens}")
+            print()
+            print(f"📆 今月 ({month}):")
+            print(f"   リクエスト: {monthly_requests}/{MONTHLY_REQUEST_LIMIT} ({monthly_requests/MONTHLY_REQUEST_LIMIT*100:.1f}%)")
+            print(f"   トークン: {monthly_tokens}/{MONTHLY_TOKEN_LIMIT} ({monthly_tokens/MONTHLY_TOKEN_LIMIT*100:.1f}%)")
+            print()
+            
+            # 残り制限計算
+            remaining_daily = DAILY_REQUEST_LIMIT - daily_requests
+            remaining_monthly_req = MONTHLY_REQUEST_LIMIT - monthly_requests
+            remaining_monthly_tok = MONTHLY_TOKEN_LIMIT - monthly_tokens
+            
+            print("🎯 残り制限:")
+            print(f"   今日のリクエスト: {remaining_daily}回")
+            print(f"   今月のリクエスト: {remaining_monthly_req}回")
+            print(f"   今月のトークン: {remaining_monthly_tok}トークン")
+            
+            if remaining_daily <= 5:
+                print("⚠️ 今日の制限に近づいています")
+            if remaining_monthly_req <= 50:
+                print("⚠️ 今月のリクエスト制限に近づいています")
+            if remaining_monthly_tok <= 5000:
+                print("⚠️ 今月のトークン制限に近づいています")
+                
+        except Exception as e:
+            print(f"⚠️ 統計取得エラー: {e}")
     
     def show_history(self, limit=10):
         """履歴表示"""
@@ -412,10 +611,16 @@ def main():
         print("  python3 instant_research_ai.py deep \"深層リサーチテーマ\"")
         print("  python3 instant_research_ai.py session \"包括的リサーチテーマ\"")
         print("  python3 instant_research_ai.py history")
+        print("  python3 instant_research_ai.py usage")
         print("  python3 instant_research_ai.py test")
         print()
         print("🔑 API設定:")
         print("  export PERPLEXITY_API_KEY=your_actual_api_key")
+        print()
+        print("💡 Perplexity Pro制限:")
+        print("  - 1日100リクエスト")
+        print("  - 月間2,000リクエスト") 
+        print("  - 月間200,000トークン ($5相当)")
         return
     
     command = sys.argv[1]
@@ -424,6 +629,8 @@ def main():
         ai.test_connection()
     elif command == "history":
         ai.show_history()
+    elif command == "usage":
+        ai.show_usage_stats()
     elif command == "instant" and len(sys.argv) > 2:
         query = " ".join(sys.argv[2:])
         ai.instant_search(query)
