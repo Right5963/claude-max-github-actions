@@ -52,10 +52,13 @@ jobs:
       run: |
         pip install requests
         
-    - name: Verify MCP integration
+    - name: Verify environment
       run: |
-        # MCP統合確認
-        claude mcp list
+        # 環境確認
+        echo "Python version: $(python3 --version)"
+        echo "Current directory: $(pwd)"
+        echo "Files in directory:"
+        ls -la claude_api_direct.py instant_research_ai.py
         
     - name: Execute Claude Max Integration Research
       id: research
@@ -73,7 +76,7 @@ jobs:
         python3 claude_api_direct.py "$TYPE" "$QUERY"
         
         # 結果ファイル確認
-        if [ -f "github_artifacts/research_report_"*".md" ]; then
+        if ls github_artifacts/research_report_*.md 1> /dev/null 2>&1; then
           echo "research_success=true" >> $GITHUB_OUTPUT
           echo "report_file=$(ls github_artifacts/research_report_*.md | head -1)" >> $GITHUB_OUTPUT
         else
