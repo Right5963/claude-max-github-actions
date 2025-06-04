@@ -1,0 +1,41 @@
+name: Simple Research Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      test_query:
+        description: 'Test Query'
+        required: true
+        default: 'テスト実行'
+
+jobs:
+  test:
+    runs-on: self-hosted
+    
+    steps:
+    - name: Simple Echo Test
+      run: |
+        echo "================================"
+        echo "🚀 ワークフロー開始"
+        echo "================================"
+        echo "クエリ: ${{ github.event.inputs.test_query }}"
+        echo "実行時刻: $(date)"
+        echo "Runner: ${{ runner.name }}"
+        echo "OS: ${{ runner.os }}"
+        echo "================================"
+        
+    - name: Create Test File
+      run: |
+        echo "テストファイルを作成中..."
+        mkdir -p test_output
+        echo "Test Query: ${{ github.event.inputs.test_query }}" > test_output/test.txt
+        echo "Created at: $(date)" >> test_output/test.txt
+        echo "✅ ファイル作成完了: test_output/test.txt"
+        ls -la test_output/
+        cat test_output/test.txt
+        
+    - name: Final Message
+      run: |
+        echo "================================"
+        echo "✅ ワークフロー完了！"
+        echo "================================"
