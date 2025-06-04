@@ -56,29 +56,28 @@ jobs:
         # MCP統合確認
         claude mcp list
         
-    - name: Execute MCP Research
+    - name: Execute Claude Max Integration Research
       id: research
+      env:
+        PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       run: |
-        # MCP経由でのリサーチ実行
+        # Claude API直接統合でのリサーチ実行
         QUERY="${{ github.event.inputs.query || 'AI技術トレンド 2024' }}"
         TYPE="${{ github.event.inputs.research_type || 'instant' }}"
         
-        echo "🔍 Starting MCP research: $TYPE - $QUERY"
+        echo "🔍 Starting Claude Max integrated research: $TYPE - $QUERY"
         
-        # Claude Code MCP経由でリサーチ実行
-        claude --model sonnet <<EOF
-        # MCP統合されたPerplexityリサーチ実行
-        result = mcp__perplexity_research__perplexity_${TYPE}_search("$QUERY")
+        # @akira_papa_IT方式: Claude API直接統合
+        python3 claude_api_direct.py "$TYPE" "$QUERY"
         
-        # 結果をファイルに保存
-        with open("research_result.md", "w", encoding="utf-8") as f:
-            f.write(f"# リサーチ結果: $QUERY\n\n")
-            f.write(f"**タイプ**: $TYPE\n")
-            f.write(f"**実行日時**: $(date)\n\n")
-            f.write(result)
-        
-        print("✅ MCP Research completed")
-        EOF
+        # 結果ファイル確認
+        if [ -f "github_artifacts/research_report_"*".md" ]; then
+          echo "research_success=true" >> $GITHUB_OUTPUT
+          echo "report_file=$(ls github_artifacts/research_report_*.md | head -1)" >> $GITHUB_OUTPUT
+        else
+          echo "research_success=false" >> $GITHUB_OUTPUT
+        fi
         
     - name: Process results
       run: |
