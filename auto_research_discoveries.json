@@ -1,0 +1,551 @@
+[
+  {
+    "type": "hidden_mcp_command",
+    "command": "claude mcp add-from-claude-desktop",
+    "source": "claude mcp --help",
+    "discovered_at": "2025-06-04T09:53:19.382601"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "awesome-mcp",
+    "url": "https://github.com/roti-c137/awesome-mcp",
+    "description": null,
+    "stars": 0,
+    "source": "GitHub search: awesome-mcp",
+    "discovered_at": "2025-06-04T09:53:19.771294"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "MCP-demo",
+    "url": "https://github.com/supertime1/MCP-demo",
+    "description": "My awesome MCP demo project",
+    "stars": 0,
+    "source": "GitHub search: awesome-mcp",
+    "discovered_at": "2025-06-04T09:53:19.771307"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "awesome-mcp-servers",
+    "url": "https://github.com/Alonxoo/awesome-mcp-servers",
+    "description": "A collection of MCP servers.",
+    "stars": 1,
+    "source": "GitHub search: awesome-mcp",
+    "discovered_at": "2025-06-04T09:53:19.771309"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "eShopLite",
+    "url": "https://github.com/Sarapakistan0/eShopLite",
+    "description": "eShopLite is a set of reference .NET applications implementing an eCommerce site with features like Semantic Search, MCP, Reasoning models and more.",
+    "stars": 0,
+    "source": "GitHub search: awesome-mcp",
+    "discovered_at": "2025-06-04T09:53:19.771311"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "Awesome-MCP-ZH",
+    "url": "https://github.com/vivekkeditz/Awesome-MCP-ZH",
+    "description": "MCP \u8d44\u6e90\u7cbe\u9009\uff0c MCP\u6307\u5357\uff0cClaude MCP\uff0cMCP Servers, MCP Clients",
+    "stars": 0,
+    "source": "GitHub search: awesome-mcp",
+    "discovered_at": "2025-06-04T09:53:19.771312"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "awesome-claude-code",
+    "url": "https://github.com/hesreallyhim/awesome-claude-code",
+    "description": "A curated list of awesome commands, files, and workflows for Claude Code",
+    "stars": 68,
+    "source": "GitHub search: awesome-claude",
+    "discovered_at": "2025-06-04T09:53:20.142687"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "mcp-mem0-general",
+    "url": "https://github.com/ryaker/mcp-mem0-general",
+    "description": "OpenAI just added memory across your chats across your openAI account. But wouldn't it be awesome to have general AI memory across all your interactions with any and all AI tools, IDEs, chatbots.... Now if it supports MCP you can with https://mem0.ai/ Give Claude desktop memory. Give cursor or windsurf memory across sessions or different projects.",
+    "stars": 8,
+    "source": "GitHub search: awesome-claude",
+    "discovered_at": "2025-06-04T09:53:20.142700"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "awesome--claude-prompts",
+    "url": "https://github.com/muzrohitranjan/awesome--claude-prompts",
+    "description": null,
+    "stars": 0,
+    "source": "GitHub search: awesome-claude",
+    "discovered_at": "2025-06-04T09:53:20.142702"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "Awesome-Claude-MCP-Servers-List",
+    "url": "https://github.com/boyso/Awesome-Claude-MCP-Servers-List",
+    "description": "We're creating a directory site for discovering MCP servers, along with sharing 100 ways to master Claude Code, MCP, and creative uses of computers.",
+    "stars": 0,
+    "source": "GitHub search: awesome-claude",
+    "discovered_at": "2025-06-04T09:53:20.142703"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "Awesome-Claude-MCP-Servers",
+    "url": "https://github.com/hgxszhj/Awesome-Claude-MCP-Servers",
+    "description": null,
+    "stars": 0,
+    "source": "GitHub search: awesome-claude",
+    "discovered_at": "2025-06-04T09:53:20.142705"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "awesome-ai-tools",
+    "url": "https://github.com/Somi-AI/awesome-ai-tools",
+    "description": "An awesome list of AI tools to help you automate, optimize, and accelerate your daily workflows.",
+    "stars": 0,
+    "source": "GitHub search: awesome-ai-tools",
+    "discovered_at": "2025-06-04T09:53:20.907379"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "awesome-ai-agent-testing",
+    "url": "https://github.com/TranMinhChienn/awesome-ai-agent-testing",
+    "description": "Awesome AI Agent Testing is your go-to resource for testing AI agents effectively. Explore frameworks, methodologies, and tools to ensure the reliability and performance of these advanced systems. \ud83d\ude80\ud83e\udd16",
+    "stars": 1,
+    "source": "GitHub search: awesome-ai-tools",
+    "discovered_at": "2025-06-04T09:53:20.907391"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "awesome-cs-tools",
+    "url": "https://github.com/gth-ai/awesome-cs-tools",
+    "description": "awesome computer science tools (AI, Web...)",
+    "stars": 12,
+    "source": "GitHub search: awesome-ai-tools",
+    "discovered_at": "2025-06-04T09:53:20.907394"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "awesome-AI-tools",
+    "url": "https://github.com/sajadh76/awesome-AI-tools",
+    "description": "A curated list of AI-based tools for different purposes \ud83d\ude80",
+    "stars": 20,
+    "source": "GitHub search: awesome-ai-tools",
+    "discovered_at": "2025-06-04T09:53:20.907395"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@upstash/context7-mcp",
+    "version": "1.0.12",
+    "description": "MCP server for Context7",
+    "keywords": [
+      "modelcontextprotocol",
+      "mcp",
+      "context7"
+    ],
+    "install_cmd": "npx -y @upstash/context7-mcp",
+    "source": "NPM search: mcp-",
+    "discovered_at": "2025-06-04T09:53:21.634286"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "n8n-nodes-mcp",
+    "version": "0.1.28",
+    "description": "MCP nodes for n8n ",
+    "keywords": [
+      "n8n-community-node-package",
+      "mcp",
+      "mcp-client",
+      "mcp-client-node",
+      "mcp-client-n8n",
+      "mcp-client-n8n-node",
+      "mcp-client-n8n-node-package"
+    ],
+    "install_cmd": "npx -y n8n-nodes-mcp",
+    "source": "NPM search: mcp-",
+    "discovered_at": "2025-06-04T09:53:21.634300"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@playwright/mcp",
+    "version": "0.0.28",
+    "description": "Playwright Tools for MCP",
+    "keywords": [],
+    "install_cmd": "npx -y @playwright/mcp",
+    "source": "NPM search: mcp-",
+    "discovered_at": "2025-06-04T09:53:21.634303"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@supabase/mcp-utils",
+    "version": "0.2.1",
+    "description": "MCP utilities",
+    "keywords": [],
+    "install_cmd": "npx -y @supabase/mcp-utils",
+    "source": "NPM search: mcp-",
+    "discovered_at": "2025-06-04T09:53:21.634312"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@mastra/mcp",
+    "version": "0.10.2",
+    "description": "Model Context Protocol (MCP) client implementation for Mastra, providing seamless integration with MCP-compatible AI models and tools.",
+    "keywords": [],
+    "install_cmd": "npx -y @mastra/mcp",
+    "source": "NPM search: mcp-",
+    "discovered_at": "2025-06-04T09:53:21.634313"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@browsermcp/mcp",
+    "version": "0.1.3",
+    "description": "MCP server for browser automation using Browser MCP",
+    "keywords": [],
+    "install_cmd": "npx -y @browsermcp/mcp",
+    "source": "NPM search: mcp-",
+    "discovered_at": "2025-06-04T09:53:21.634315"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "mcp-framework",
+    "version": "0.2.13",
+    "description": "Framework for building Model Context Protocol (MCP) servers in Typescript",
+    "keywords": [
+      "mcp",
+      "claude",
+      "anthropic",
+      "ai",
+      "framework",
+      "tools",
+      "modelcontextprotocol",
+      "model",
+      "context",
+      "protocol"
+    ],
+    "install_cmd": "npx -y mcp-framework",
+    "source": "NPM search: mcp-",
+    "discovered_at": "2025-06-04T09:53:21.634317"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "mcp-evals",
+    "version": "1.0.18",
+    "description": "GitHub Action for evaluating MCP server tool calls using LLM-based scoring",
+    "keywords": [
+      "mcp",
+      "evaluation",
+      "github-actions",
+      "llm"
+    ],
+    "install_cmd": "npx -y mcp-evals",
+    "source": "NPM search: mcp-",
+    "discovered_at": "2025-06-04T09:53:21.634318"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@gongrzhe/server-gmail-autoauth-mcp",
+    "version": "1.1.9",
+    "description": "Gmail MCP server with auto authentication support",
+    "keywords": [
+      "gmail",
+      "mcp",
+      "cursor",
+      "ai",
+      "oauth",
+      "model-context-protocol",
+      "google-gmail",
+      "claude",
+      "auto-auth"
+    ],
+    "install_cmd": "npx -y @gongrzhe/server-gmail-autoauth-mcp",
+    "source": "NPM search: mcp-",
+    "discovered_at": "2025-06-04T09:53:21.634320"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "mcp-hello-world",
+    "version": "1.1.2",
+    "description": "A simple Hello World MCP server",
+    "keywords": [
+      "lobehub",
+      "model-context-protocol",
+      "sdk"
+    ],
+    "install_cmd": "npx -y mcp-hello-world",
+    "source": "NPM search: mcp-",
+    "discovered_at": "2025-06-04T09:53:21.634321"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "claude-mcp",
+    "version": "2.3.1",
+    "description": "An MCP server that allows AI tools to interact with Claude Code programmatically with session continuity and async execution support.",
+    "keywords": [
+      "mcp",
+      "model-context-protocol",
+      "claude-code",
+      "ai",
+      "llm",
+      "agent",
+      "async",
+      "conversation-continuity",
+      "code-analysis"
+    ],
+    "install_cmd": "npx -y claude-mcp",
+    "source": "NPM search: claude-mcp",
+    "discovered_at": "2025-06-04T09:53:22.498324"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@gabriel3615/claude-stock-analysis-mcp",
+    "version": "1.2.12",
+    "description": "Claude MCP\u670d\u52a1\u5668\uff0c\u63d0\u4f9b\u80a1\u7968\u5206\u6790\u529f\u80fd",
+    "keywords": [
+      "claude",
+      "mcp",
+      "stock",
+      "analysis",
+      "trading"
+    ],
+    "install_cmd": "npx -y @gabriel3615/claude-stock-analysis-mcp",
+    "source": "NPM search: claude-mcp",
+    "discovered_at": "2025-06-04T09:53:22.498337"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "claude-chatgpt-mcp",
+    "version": "1.0.1",
+    "description": "A Claude MCP tool to interact with the ChatGPT desktop app on macOS",
+    "keywords": [
+      "mcp",
+      "claude",
+      "chatgpt",
+      "mac"
+    ],
+    "install_cmd": "npx -y claude-chatgpt-mcp",
+    "source": "NPM search: claude-mcp",
+    "discovered_at": "2025-06-04T09:53:22.498338"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@smithery/cli",
+    "version": "1.2.6",
+    "description": "A NPX command to install and list Model Context Protocols from Smithery",
+    "keywords": [],
+    "install_cmd": "npx -y @smithery/cli",
+    "source": "NPM search: claude-mcp",
+    "discovered_at": "2025-06-04T09:53:22.498340"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@modelcontextprotocol/server-sequential-thinking",
+    "version": "0.6.2",
+    "description": "MCP server for sequential thinking and problem solving",
+    "keywords": [],
+    "install_cmd": "npx -y @modelcontextprotocol/server-sequential-thinking",
+    "source": "NPM search: claude-mcp",
+    "discovered_at": "2025-06-04T09:53:22.498341"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@modelcontextprotocol/server-brave-search",
+    "version": "0.6.2",
+    "description": "MCP server for Brave Search API integration",
+    "keywords": [],
+    "install_cmd": "npx -y @modelcontextprotocol/server-brave-search",
+    "source": "NPM search: claude-mcp",
+    "discovered_at": "2025-06-04T09:53:22.498344"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "exa-mcp-server",
+    "version": "0.3.10",
+    "description": "A Model Context Protocol server with Exa for web search, academic paper search, and Twitter/X.com search. Provides real-time web searches with configurable tool selection, allowing users to enable or disable specific search capabilities. Supports customiz",
+    "keywords": [
+      "mcp",
+      "model context protocol",
+      "exa",
+      "websearch",
+      "claude",
+      "ai",
+      "research",
+      "papers",
+      "linkedin"
+    ],
+    "install_cmd": "npx -y exa-mcp-server",
+    "source": "NPM search: claude-mcp",
+    "discovered_at": "2025-06-04T09:53:22.498345"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@executeautomation/playwright-mcp-server",
+    "version": "1.0.5",
+    "description": "Model Context Protocol servers for Playwright",
+    "keywords": [
+      "playwright",
+      "automation",
+      "AI",
+      "Claude MCP"
+    ],
+    "install_cmd": "npx -y @executeautomation/playwright-mcp-server",
+    "source": "NPM search: claude-mcp",
+    "discovered_at": "2025-06-04T09:53:22.498346"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "mcp-remote",
+    "version": "0.1.9",
+    "description": "Remote proxy for Model Context Protocol, allowing local-only clients to connect to remote servers using oAuth",
+    "keywords": [
+      "mcp",
+      "stdio",
+      "sse",
+      "remote",
+      "oauth"
+    ],
+    "install_cmd": "npx -y mcp-remote",
+    "source": "NPM search: claude-mcp",
+    "discovered_at": "2025-06-04T09:53:22.498347"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@modelcontextprotocol/sdk",
+    "version": "1.12.1",
+    "description": "Model Context Protocol implementation for TypeScript",
+    "keywords": [
+      "modelcontextprotocol",
+      "mcp"
+    ],
+    "install_cmd": "npx -y @modelcontextprotocol/sdk",
+    "source": "NPM search: model-context-protocol",
+    "discovered_at": "2025-06-04T09:53:23.115719"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "model-context-protocol",
+    "version": "1.0.2",
+    "description": "The one and only MCP Server for dads jokes.",
+    "keywords": [
+      "mcp",
+      "model-context-protocol",
+      "server",
+      "authentication",
+      "sonarcloud"
+    ],
+    "install_cmd": "npx -y model-context-protocol",
+    "source": "NPM search: model-context-protocol",
+    "discovered_at": "2025-06-04T09:53:23.115732"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "figma-developer-mcp",
+    "version": "0.3.1",
+    "description": "Model Context Protocol server for Figma integration",
+    "keywords": [
+      "figma",
+      "mcp",
+      "typescript"
+    ],
+    "install_cmd": "npx -y figma-developer-mcp",
+    "source": "NPM search: model-context-protocol",
+    "discovered_at": "2025-06-04T09:53:23.115734"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@modelcontextprotocol/inspector",
+    "version": "0.13.0",
+    "description": "Model Context Protocol inspector",
+    "keywords": [],
+    "install_cmd": "npx -y @modelcontextprotocol/inspector",
+    "source": "NPM search: model-context-protocol",
+    "discovered_at": "2025-06-04T09:53:23.115736"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "nx-mcp",
+    "version": "0.2.0",
+    "description": "A Model Context Protocol server implementation for Nx",
+    "keywords": [
+      "nx",
+      "monorepo",
+      "ai",
+      "mcp",
+      "model",
+      "context",
+      "protocol"
+    ],
+    "install_cmd": "npx -y nx-mcp",
+    "source": "NPM search: model-context-protocol",
+    "discovered_at": "2025-06-04T09:53:23.115741"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@langchain/mcp-adapters",
+    "version": "0.5.2",
+    "description": "LangChain.js adapters for Model Context Protocol (MCP)",
+    "keywords": [
+      "langchain",
+      "mcp",
+      "model-context-protocol",
+      "ai",
+      "tools"
+    ],
+    "install_cmd": "npx -y @langchain/mcp-adapters",
+    "source": "NPM search: model-context-protocol",
+    "discovered_at": "2025-06-04T09:53:23.115742"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@modelcontextprotocol/inspector-cli",
+    "version": "0.13.0",
+    "description": "CLI for the Model Context Protocol inspector",
+    "keywords": [],
+    "install_cmd": "npx -y @modelcontextprotocol/inspector-cli",
+    "source": "NPM search: model-context-protocol",
+    "discovered_at": "2025-06-04T09:53:23.115744"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "mongodb-mcp-server",
+    "version": "0.1.1",
+    "description": "MongoDB Model Context Protocol Server",
+    "keywords": [],
+    "install_cmd": "npx -y mongodb-mcp-server",
+    "source": "NPM search: model-context-protocol",
+    "discovered_at": "2025-06-04T09:53:23.115745"
+  },
+  {
+    "type": "official_mcp_tool",
+    "tool_name": "mcp-connector",
+    "source": "https://docs.anthropic.com/en/docs/claude-code",
+    "discovered_at": "2025-06-04T09:53:23.282568"
+  },
+  {
+    "type": "official_command",
+    "command": "claude -c -p",
+    "source": "https://docs.anthropic.com/en/docs/claude-code/cli-usage",
+    "discovered_at": "2025-06-04T09:53:23.419943"
+  },
+  {
+    "type": "official_command",
+    "command": "claude -p --max-turns",
+    "source": "https://docs.anthropic.com/en/docs/claude-code/cli-usage",
+    "discovered_at": "2025-06-04T09:53:23.419960"
+  },
+  {
+    "type": "official_command",
+    "command": "claude --model claude-sonnet-",
+    "source": "https://docs.anthropic.com/en/docs/claude-code/cli-usage",
+    "discovered_at": "2025-06-04T09:53:23.419961"
+  },
+  {
+    "type": "official_command",
+    "command": "claude -p --permission-prompt-tool",
+    "source": "https://docs.anthropic.com/en/docs/claude-code/cli-usage",
+    "discovered_at": "2025-06-04T09:53:23.419962"
+  },
+  {
+    "type": "official_command",
+    "command": "claude --resume abc",
+    "source": "https://docs.anthropic.com/en/docs/claude-code/cli-usage",
+    "discovered_at": "2025-06-04T09:53:23.419963"
+  }
+]

@@ -108,6 +108,44 @@ dev_knowledge_sync   # Obsidian知識同期
 - **継続進化**: デーモンによる定期的エコシステム更新
 - **統合管理**: 効率化ダッシュボードによる全体状況把握
 
+## 🧠 **自動リサーチシステム (2025-06-04完成)** ⚡革命的自動発見
+
+### 🔍 自動的な知識発見・学習システム
+
+**即使用可能な自動リサーチツール:**
+```bash
+# 完全自動リサーチ (346の新発見を記録済み)
+python3 auto_research_system.py              # 全方位自動リサーチ実行
+
+# 特化リサーチ  
+python3 auto_research_system.py claude-commands  # Claudeコマンド発見
+python3 auto_research_system.py npm              # NPM MCP パッケージ発見
+python3 auto_research_system.py github           # GitHub Awesome リスト発見
+python3 auto_research_system.py docs             # 公式ドキュメント発見
+
+# 革命的MCPブリッジ（全ツール統合利用）
+./mcp_revolutionary_bridge.sh dev-quick "commit message"  # スマートコミット
+./mcp_revolutionary_bridge.sh dev-context "file.py"       # ファイル分析
+./mcp_revolutionary_bridge.sh obsidian-search "query"     # Obsidian検索
+```
+
+**自動発見の成果:**
+- ✅ **346個**の新ツール・コマンド・リソース自動発見
+- ✅ **48個**の重要発見を重複除去して記録  
+- ✅ **隠れたMCPコマンド**自動発見（add-from-claude-desktop等）
+- ✅ **公式ドキュメント**からの最新情報自動抽出
+- ✅ **Obsidianレポート**自動生成・保存
+
+**リサーチ範囲:**
+- Claude Code コマンド・機能
+- NPM MCP エコシステム  
+- GitHub Awesome リスト
+- 公式ドキュメント・API
+- Claude Desktop 設定情報
+
+**革命的な自立学習:**
+今後は手動でツールを教えてもらわなくても、システムが自動的に最新の効率化ツールを発見・提案します。
+
 ### ✅ 従来システム（高度知識処理）
 **新セッション開始時に必ず使用すべきツール:**
 

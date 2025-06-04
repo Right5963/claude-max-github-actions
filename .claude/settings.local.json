@@ -147,7 +147,8 @@
       "Bash(time python3:*)",
       "Bash(./git-daily status)",
       "Bash(time git status)",
-      "Bash(time ./git-daily status)"
+      "Bash(time ./git-daily status)",
+      "Bash(./git-daily quick \"Test: Functional verification of git-daily system\")"
     ],
     "deny": []
   },
