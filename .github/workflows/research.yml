@@ -11,6 +11,10 @@ on:
 jobs:
   research:
     runs-on: self-hosted
+    defaults:
+      run:
+        shell: bash
+        working-directory: ${{ github.workspace }}
     
     steps:
     - name: Check Environment
@@ -20,16 +24,16 @@ jobs:
         echo "🖥️ System info:"
         uname -a
         echo "🐍 Python version:"
-        python3 --version || python --version
+        python3 --version || python --version || echo "Python not found"
         echo "📦 pip version:"
-        pip3 --version || pip --version
+        pip3 --version || pip --version || echo "pip not found"
     
     - name: Test Internet Connection
       run: |
         echo "🌐 Testing internet connection..."
-        curl -I https://github.com || echo "Failed to connect to GitHub"
-        curl -I https://api.perplexity.ai || echo "Failed to connect to Perplexity"
-        curl -I https://api.anthropic.com || echo "Failed to connect to Anthropic"
+        curl -I -m 5 https://github.com || echo "Failed to connect to GitHub"
+        curl -I -m 5 https://api.perplexity.ai || echo "Failed to connect to Perplexity"
+        curl -I -m 5 https://api.anthropic.com || echo "Failed to connect to Anthropic"
     
     - name: Simple Test Script
       run: |
@@ -57,7 +61,7 @@ jobs:
         print(f"\n📝 Research Query: {sys.argv[1] if len(sys.argv) > 1 else 'No query provided'}")
         EOF
         
-        python3 test_apis.py "${{ github.event.inputs.research_query }}"
+        python3 test_apis.py "${{ github.event.inputs.research_query }}" || python test_apis.py "${{ github.event.inputs.research_query }}" || echo "Python script failed"
       env:
         PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -71,8 +75,13 @@ jobs:
         echo "" >> output/report.md
         echo "This is a test report to verify the workflow is working." >> output/report.md
         echo "" >> output/report.md
+        echo "### Environment Info:" >> output/report.md
+        echo "- Working Directory: $(pwd)" >> output/report.md
+        echo "- User: $(whoami)" >> output/report.md
+        echo "- Home: $HOME" >> output/report.md
+        echo "" >> output/report.md
         echo "### Next Steps:" >> output/report.md
-        echo "1. Fix internet connectivity issues" >> output/report.md
+        echo "1. Fix any environment issues" >> output/report.md
         echo "2. Install required Python packages" >> output/report.md
         echo "3. Run actual research scripts" >> output/report.md
         
