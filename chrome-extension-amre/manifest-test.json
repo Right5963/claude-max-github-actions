@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "AMRE Test Version",
+  "version": "0.1.0",
+  "description": "テスト用最小版",
+  
+  "permissions": [
+    "activeTab"
+  ],
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script-minimal.js"]
+    }
+  ],
+
+  "action": {
+    "default_title": "AMRE Test"
+  }
+}

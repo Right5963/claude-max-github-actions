@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMRE - AI Market Research Extension</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="amre-popup">
+        <!-- ヘッダー -->
+        <header class="amre-header">
+            <div class="amre-logo">
+                <h1>🎯 AMRE</h1>
+                <p>AI Market Research Extension</p>
+            </div>
+            <div class="amre-version">v1.0.0</div>
+        </header>
+
+        <!-- サイト検出 -->
+        <section class="amre-site-detection">
+            <div class="site-info">
+                <span class="site-label">現在のサイト:</span>
+                <span id="current-site" class="site-name">検出中...</span>
+                <span id="site-status" class="site-status"></span>
+            </div>
+        </section>
+
+        <!-- メインコントロール -->
+        <section class="amre-controls">
+            <div class="control-group">
+                <h3>📊 データ収集</h3>
+                <button id="collect-current" class="btn-primary">
+                    <span class="btn-icon">🔄</span>
+                    現在のページを収集
+                </button>
+                <button id="collect-bulk" class="btn-secondary">
+                    <span class="btn-icon">📦</span>
+                    一括収集（複数ページ）
+                </button>
+            </div>
+
+            <div class="control-group">
+                <h3>💾 データ管理</h3>
+                <button id="save-obsidian" class="btn-primary">
+                    <span class="btn-icon">📝</span>
+                    Obsidianに保存
+                </button>
+                <button id="export-json" class="btn-secondary">
+                    <span class="btn-icon">📄</span>
+                    JSONエクスポート
+                </button>
+            </div>
+
+            <div class="control-group">
+                <h3>🤖 AI分析</h3>
+                <button id="analyze-trends" class="btn-primary">
+                    <span class="btn-icon">📈</span>
+                    トレンド分析
+                </button>
+                <button id="analyze-competitors" class="btn-secondary">
+                    <span class="btn-icon">🔍</span>
+                    競合分析
+                </button>
+            </div>
+        </section>
+
+        <!-- 統計情報 -->
+        <section class="amre-stats">
+            <h3>📊 収集統計</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-label">今日の収集</span>
+                    <span id="today-count" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">総収集数</span>
+                    <span id="total-count" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">最終更新</span>
+                    <span id="last-update" class="stat-value">未実行</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 設定とヘルプ -->
+        <section class="amre-settings">
+            <div class="settings-buttons">
+                <button id="open-options" class="btn-link">
+                    <span class="btn-icon">⚙️</span>
+                    設定
+                </button>
+                <button id="open-help" class="btn-link">
+                    <span class="btn-icon">❓</span>
+                    ヘルプ
+                </button>
+                <button id="open-logs" class="btn-link">
+                    <span class="btn-icon">📋</span>
+                    ログ
+                </button>
+            </div>
+        </section>
+
+        <!-- ステータス表示 -->
+        <section class="amre-status">
+            <div id="status-message" class="status-message">準備完了</div>
+            <div id="progress-bar" class="progress-bar" style="display: none;">
+                <div class="progress-fill"></div>
+            </div>
+        </section>
+
+        <!-- クイックアクセス -->
+        <section class="amre-quick-access">
+            <h4>🚀 クイックアクセス</h4>
+            <div class="quick-buttons">
+                <button id="fanza-ranking" class="quick-btn" data-site="fanza">
+                    FANZA人気
+                </button>
+                <button id="yahoo-ai-auctions" class="quick-btn" data-site="yahoo">
+                    ヤフオクAI
+                </button>
+                <button id="civitai-trending" class="quick-btn" data-site="civitai">
+                    Civitaiトレンド
+                </button>
+                <button id="dlsite-new" class="quick-btn" data-site="dlsite">
+                    DLsite新着
+                </button>
+            </div>
+        </section>
+
+        <!-- フッター -->
+        <footer class="amre-footer">
+            <p>AI生成収益化事業専用ツール</p>
+            <p class="copyright">© 2025 AMRE Project</p>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

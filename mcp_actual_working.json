@@ -1,0 +1,60 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ]
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ]
+    },
+    "excel": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "excel-mcp-server"
+      ]
+    },
+    "calculator": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "calculator-mcp-server"
+      ]
+    },
+    "trello": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "trello-mcp-server"
+      ]
+    },
+    "wikipedia": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "wikipedia-mcp-server"
+      ]
+    },
+    "ssh": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "ssh-mcp-server"
+      ]
+    },
+    "terminal": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "terminal-mcp-server"
+      ]
+    }
+  }
+}

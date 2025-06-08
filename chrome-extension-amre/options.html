@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMRE - 設定</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="amre-options">
+        <!-- ヘッダー -->
+        <header class="options-header">
+            <div class="header-content">
+                <h1>🎯 AMRE 設定</h1>
+                <p>AI Market Research Extension</p>
+            </div>
+            <div class="header-version">
+                <span id="version-info">v1.0.0</span>
+                <button id="check-updates" class="btn-link">更新確認</button>
+            </div>
+        </header>
+
+        <!-- ナビゲーション -->
+        <nav class="options-nav">
+            <button class="nav-tab active" data-tab="general">
+                <span class="tab-icon">⚙️</span>
+                一般設定
+            </button>
+            <button class="nav-tab" data-tab="collection">
+                <span class="tab-icon">📊</span>
+                データ収集
+            </button>
+            <button class="nav-tab" data-tab="integration">
+                <span class="tab-icon">🔗</span>
+                連携設定
+            </button>
+            <button class="nav-tab" data-tab="advanced">
+                <span class="tab-icon">🛠️</span>
+                高度な設定
+            </button>
+            <button class="nav-tab" data-tab="stats">
+                <span class="tab-icon">📈</span>
+                統計情報
+            </button>
+        </nav>
+
+        <!-- メインコンテンツ -->
+        <main class="options-content">
+            <!-- 一般設定 -->
+            <section id="general" class="tab-content active">
+                <h2>🎯 一般設定</h2>
+                
+                <div class="setting-group">
+                    <h3>基本設定</h3>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="auto-start" class="setting-checkbox">
+                            <span class="checkmark"></span>
+                            拡張機能の自動起動
+                        </label>
+                        <p class="setting-description">ブラウザ起動時に自動的にAMREを有効化します</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="show-notifications" class="setting-checkbox">
+                            <span class="checkmark"></span>
+                            通知の表示
+                        </label>
+                        <p class="setting-description">データ収集完了時などに通知を表示します</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="dark-mode" class="setting-checkbox">
+                            <span class="checkmark"></span>
+                            ダークモード
+                        </label>
+                        <p class="setting-description">UI をダークテーマで表示します</p>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>言語・地域設定</h3>
+                    <div class="setting-item">
+                        <label for="language-select" class="setting-label">表示言語</label>
+                        <select id="language-select" class="setting-select">
+                            <option value="ja">日本語</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label for="timezone-select" class="setting-label">タイムゾーン</label>
+                        <select id="timezone-select" class="setting-select">
+                            <option value="Asia/Tokyo">Asia/Tokyo (JST)</option>
+                            <option value="UTC">UTC</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- データ収集設定 -->
+            <section id="collection" class="tab-content">
+                <h2>📊 データ収集設定</h2>
+                
+                <div class="setting-group">
+                    <h3>収集対象サイト</h3>
+                    <div class="site-toggles">
+                        <div class="site-toggle">
+                            <label class="setting-label">
+                                <input type="checkbox" id="enable-fanza" class="setting-checkbox" checked>
+                                <span class="checkmark"></span>
+                                <span class="site-name">FANZA同人</span>
+                            </label>
+                            <div class="site-status online">オンライン</div>
+                        </div>
+                        
+                        <div class="site-toggle">
+                            <label class="setting-label">
+                                <input type="checkbox" id="enable-dlsite" class="setting-checkbox" checked>
+                                <span class="checkmark"></span>
+                                <span class="site-name">DLsite</span>
+                            </label>
+                            <div class="site-status online">オンライン</div>
+                        </div>
+                        
+                        <div class="site-toggle">
+                            <label class="setting-label">
+                                <input type="checkbox" id="enable-yahoo" class="setting-checkbox" checked>
+                                <span class="checkmark"></span>
+                                <span class="site-name">ヤフオク</span>
+                            </label>
+                            <div class="site-status online">オンライン</div>
+                        </div>
+                        
+                        <div class="site-toggle">
+                            <label class="setting-label">
+                                <input type="checkbox" id="enable-civitai" class="setting-checkbox" checked>
+                                <span class="checkmark"></span>
+                                <span class="site-name">Civitai</span>
+                            </label>
+                            <div class="site-status online">オンライン</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>収集オプション</h3>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="auto-collect" class="setting-checkbox">
+                            <span class="checkmark"></span>
+                            ページ読み込み時の自動収集
+                        </label>
+                        <p class="setting-description">対応サイトのページを開いた際に自動的にデータを収集します</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label for="collect-limit" class="setting-label">1回の収集上限</label>
+                        <select id="collect-limit" class="setting-select">
+                            <option value="50">50件</option>
+                            <option value="100" selected>100件</option>
+                            <option value="200">200件</option>
+                            <option value="500">500件</option>
+                        </select>
+                        <p class="setting-description">1回の収集で取得する最大データ件数</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label for="data-quality" class="setting-label">データ品質</label>
+                        <select id="data-quality" class="setting-select">
+                            <option value="basic">基本</option>
+                            <option value="standard" selected>標準</option>
+                            <option value="high">高品質</option>
+                            <option value="maximum">最高品質</option>
+                        </select>
+                        <p class="setting-description">収集するデータの詳細レベルを選択</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 連携設定 -->
+            <section id="integration" class="tab-content">
+                <h2>🔗 連携設定</h2>
+                
+                <div class="setting-group">
+                    <h3>Claude Code 連携</h3>
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <span class="integration-icon">🤖</span>
+                            <div class="integration-info">
+                                <h4>Claude Code MCP</h4>
+                                <p>AI分析とObsidian連携</p>
+                            </div>
+                            <div class="integration-status" id="claude-code-status">
+                                <span class="status-dot offline"></span>
+                                <span class="status-text">接続確認中...</span>
+                            </div>
+                        </div>
+                        
+                        <div class="integration-controls">
+                            <label class="setting-label">
+                                <input type="checkbox" id="enable-claude-code" class="setting-checkbox">
+                                <span class="checkmark"></span>
+                                Claude Code連携を有効化
+                            </label>
+                            
+                            <div class="setting-item">
+                                <label for="claude-endpoint" class="setting-label">エンドポイントURL</label>
+                                <input type="url" id="claude-endpoint" class="setting-input" 
+                                       value="http://localhost:8080/amre-api" placeholder="http://localhost:8080/amre-api">
+                            </div>
+                            
+                            <button id="test-claude-connection" class="btn-secondary">接続テスト</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>Obsidian 連携</h3>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="auto-save-obsidian" class="setting-checkbox">
+                            <span class="checkmark"></span>
+                            自動Obsidian保存
+                        </label>
+                        <p class="setting-description">データ収集後に自動的にObsidianに保存します</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label for="obsidian-path" class="setting-label">保存先パス</label>
+                        <input type="text" id="obsidian-path" class="setting-input" 
+                               value="03_Technical/市場調査/" placeholder="03_Technical/市場調査/">
+                        <p class="setting-description">Obsidian内での保存先フォルダ</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label for="obsidian-template" class="setting-label">テンプレート</label>
+                        <select id="obsidian-template" class="setting-select">
+                            <option value="default">デフォルト</option>
+                            <option value="detailed">詳細レポート</option>
+                            <option value="summary">サマリー</option>
+                            <option value="custom">カスタム</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>外部エクスポート</h3>
+                    <div class="export-options">
+                        <button id="export-csv" class="btn-secondary">CSV出力</button>
+                        <button id="export-json" class="btn-secondary">JSON出力</button>
+                        <button id="export-excel" class="btn-secondary">Excel出力</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 高度な設定 -->
+            <section id="advanced" class="tab-content">
+                <h2>🛠️ 高度な設定</h2>
+                
+                <div class="setting-group">
+                    <h3>パフォーマンス</h3>
+                    <div class="setting-item">
+                        <label for="sync-interval" class="setting-label">同期間隔</label>
+                        <select id="sync-interval" class="setting-select">
+                            <option value="60000">1分</option>
+                            <option value="300000" selected>5分</option>
+                            <option value="600000">10分</option>
+                            <option value="1800000">30分</option>
+                            <option value="3600000">1時間</option>
+                        </select>
+                        <p class="setting-description">Claude Codeとの自動同期間隔</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label for="cache-size" class="setting-label">キャッシュサイズ</label>
+                        <select id="cache-size" class="setting-select">
+                            <option value="100">100MB</option>
+                            <option value="500" selected>500MB</option>
+                            <option value="1000">1GB</option>
+                            <option value="2000">2GB</option>
+                        </select>
+                        <p class="setting-description">ローカルストレージの使用上限</p>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>デバッグ</h3>
+                    <div class="setting-item">
+                        <label class="setting-label">
+                            <input type="checkbox" id="debug-mode" class="setting-checkbox">
+                            <span class="checkmark"></span>
+                            デバッグモード
+                        </label>
+                        <p class="setting-description">詳細なログとデバッグ情報を表示</p>
+                    </div>
+                    
+                    <div class="debug-actions">
+                        <button id="clear-cache" class="btn-warning">キャッシュクリア</button>
+                        <button id="export-logs" class="btn-secondary">ログ出力</button>
+                        <button id="reset-settings" class="btn-danger">設定リセット</button>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3>バックアップ・復元</h3>
+                    <div class="backup-restore">
+                        <button id="backup-data" class="btn-primary">データバックアップ</button>
+                        <button id="restore-data" class="btn-secondary">データ復元</button>
+                        <input type="file" id="restore-file" accept=".json" style="display: none;">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 統計情報 -->
+            <section id="stats" class="tab-content">
+                <h2>📈 統計情報</h2>
+                
+                <div class="stats-overview">
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="total-collections">0</div>
+                            <div class="stat-label">総収集数</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">📅</div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="today-collections">0</div>
+                            <div class="stat-label">今日の収集</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="success-rate">0%</div>
+                            <div class="stat-label">成功率</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">💾</div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="storage-used">0MB</div>
+                            <div class="stat-label">使用容量</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-charts">
+                    <div class="chart-container">
+                        <h3>サイト別収集数</h3>
+                        <div id="site-chart" class="chart-placeholder">
+                            チャートデータ読み込み中...
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <h3>週間アクティビティ</h3>
+                        <div id="activity-chart" class="chart-placeholder">
+                            チャートデータ読み込み中...
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-details">
+                    <h3>詳細統計</h3>
+                    <div class="stats-table">
+                        <div class="table-header">
+                            <span>サイト</span>
+                            <span>収集数</span>
+                            <span>最終収集</span>
+                            <span>成功率</span>
+                        </div>
+                        <div id="stats-table-body" class="table-body">
+                            <!-- 動的に生成 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- フッター -->
+        <footer class="options-footer">
+            <div class="footer-links">
+                <a href="#" id="help-link">ヘルプ</a>
+                <a href="#" id="feedback-link">フィードバック</a>
+                <a href="#" id="privacy-link">プライバシー</a>
+            </div>
+            <div class="footer-info">
+                <p>© 2025 AMRE Project - AI生成収益化事業専用ツール</p>
+            </div>
+        </footer>
+
+        <!-- ステータスメッセージ -->
+        <div id="status-toast" class="status-toast">
+            <span id="status-message"></span>
+        </div>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>

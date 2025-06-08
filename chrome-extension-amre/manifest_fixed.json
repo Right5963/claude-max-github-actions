@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "AI Market Research Extension (AMRE)",
+  "version": "1.0.0",
+  "description": "AI生成収益化事業専用の市場調査・データ収集Chrome拡張機能",
+  
+  "permissions": [
+    "activeTab",
+    "storage", 
+    "scripting",
+    "tabs"
+  ],
+  
+  "host_permissions": [
+    "https://www.dmm.co.jp/*",
+    "https://dlsite.com/*", 
+    "https://auctions.yahoo.co.jp/*",
+    "https://civitai.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.dmm.co.jp/dc/doujin/*",
+        "https://dlsite.com/*",
+        "https://auctions.yahoo.co.jp/*", 
+        "https://civitai.com/*"
+      ],
+      "js": ["content-script.js"],
+      "css": ["amre-styles.css"]
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AMRE - AI Market Research"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "options_page": "options.html"
+}

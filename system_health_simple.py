@@ -79,11 +79,11 @@ class SystemHealthAdvanced:
                     timeout=3,
                     text=True,
                     cwd='.'
-                )
+            )
 
-                if result.returncode == 0:
+            if result.returncode == 0:
                     return "✅ Perfect"
-                else:
+            else:
                     return "⚠️ Import Issues"
 
             except Exception:
@@ -172,7 +172,7 @@ def main():
     health = SystemHealthAdvanced()
 
     if health.python_environment_fix():
-        health.check_all_systems()
+    health.check_all_systems()
         health.save_detailed_report()
     else:
         print("❌ Python環境の修正が必要です")

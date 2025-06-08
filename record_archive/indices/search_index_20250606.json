@@ -1,0 +1,247 @@
+{
+  "created": "2025-06-06T23:42:34.854995",
+  "files": {
+    ".git_knowledge_db.json": {
+      "size": 10255,
+      "modified": "2025-06-04T15:47:23.403849",
+      "type": "data",
+      "activities_count": 0
+    },
+    ".obsidian_sync_state.json": {
+      "size": 69,
+      "modified": "2025-06-04T19:41:53.721446",
+      "type": "data",
+      "activities_count": 0
+    },
+    ".smart_git_state.json": {
+      "size": 497,
+      "modified": "2025-06-04T15:47:23.451387",
+      "type": "data",
+      "activities_count": 0
+    },
+    "ai_content_research_2025-06-05.json": {
+      "size": 2770,
+      "modified": "2025-06-05T19:41:44.023619",
+      "type": "data",
+      "activities_count": 0
+    },
+    "ai_insight_evaluation.json": {
+      "size": 1862,
+      "modified": "2025-06-04T15:47:23.911420",
+      "type": "data",
+      "activities_count": 0
+    },
+    "ai_success_works_analysis_2025-06-05.json": {
+      "size": 222263,
+      "modified": "2025-06-06T03:14:56.316566",
+      "type": "data",
+      "activities_count": 0
+    },
+    "auto_research_discoveries.json": {
+      "size": 19633,
+      "modified": "2025-06-04T15:50:19.150405",
+      "type": "data",
+      "activities_count": 0
+    },
+    "current_session.json": {
+      "size": 96,
+      "modified": "2025-06-06T23:42:34.091176",
+      "type": "session",
+      "activities_count": 0
+    },
+    "hybrid_intelligence.json": {
+      "size": 3247,
+      "modified": "2025-06-04T15:47:24.547358",
+      "type": "data",
+      "activities_count": 0
+    },
+    "inbox_analysis_summary.json": {
+      "size": 111,
+      "modified": "2025-06-04T15:47:24.607687",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_actual_working.json": {
+      "size": 981,
+      "modified": "2025-06-06T22:37:14.471238",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_claude_code_settings.json": {
+      "size": 1561,
+      "modified": "2025-06-06T22:37:14.451193",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_config.json": {
+      "size": 1514,
+      "modified": "2025-06-06T22:37:15.918936",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_config_correct.json": {
+      "size": 896,
+      "modified": "2025-06-06T22:37:15.867028",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_correct_config.json": {
+      "size": 1299,
+      "modified": "2025-06-06T23:41:05.347334",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_efficiency_dashboard.json": {
+      "size": 1330,
+      "modified": "2025-06-04T15:47:24.975523",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_english.json": {
+      "size": 591,
+      "modified": "2025-06-06T22:51:28.892953",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_escaped.json": {
+      "size": 793,
+      "modified": "2025-06-06T22:49:15.198797",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_fixed.json": {
+      "size": 783,
+      "modified": "2025-06-06T22:46:58.983630",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_integration_report.json": {
+      "size": 1720,
+      "modified": "2025-06-04T15:47:25.017810",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_minimal.json": {
+      "size": 744,
+      "modified": "2025-06-06T22:44:46.152788",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_settings_actual.json": {
+      "size": 1293,
+      "modified": "2025-06-06T22:37:14.446156",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_slash.json": {
+      "size": 778,
+      "modified": "2025-06-06T22:50:56.937260",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_working_config.json": {
+      "size": 1205,
+      "modified": "2025-06-06T22:43:12.680367",
+      "type": "data",
+      "activities_count": 0
+    },
+    "package-lock.json": {
+      "size": 59613,
+      "modified": "2025-06-05T06:13:59.613267",
+      "type": "data",
+      "activities_count": 0
+    },
+    "package.json": {
+      "size": 546,
+      "modified": "2025-06-05T06:12:07.582686",
+      "type": "data",
+      "activities_count": 0
+    },
+    "pdca_data.json": {
+      "size": 624,
+      "modified": "2025-06-04T15:47:25.296242",
+      "type": "data",
+      "activities_count": 0
+    },
+    "poster_prompts.json": {
+      "size": 697,
+      "modified": "2025-06-04T15:47:25.523851",
+      "type": "data",
+      "activities_count": 0
+    },
+    "reality_check_report.json": {
+      "size": 1930,
+      "modified": "2025-06-04T15:47:25.604603",
+      "type": "data",
+      "activities_count": 0
+    },
+    "round3_final_optimization.json": {
+      "size": 2306,
+      "modified": "2025-06-04T15:47:25.732799",
+      "type": "data",
+      "activities_count": 0
+    },
+    "sales_core_data.json": {
+      "size": 957,
+      "modified": "2025-06-04T15:47:25.738799",
+      "type": "data",
+      "activities_count": 0
+    },
+    "selling_data.json": {
+      "size": 268,
+      "modified": "2025-06-04T15:47:25.767313",
+      "type": "data",
+      "activities_count": 0
+    },
+    "session_20250603.json": {
+      "size": 205,
+      "modified": "2025-06-04T15:47:25.780366",
+      "type": "session",
+      "activities_count": 0
+    },
+    "system_health_report_detailed.json": {
+      "size": 1728,
+      "modified": "2025-06-04T15:47:25.953461",
+      "type": "data",
+      "activities_count": 0
+    },
+    "system_reality_report.json": {
+      "size": 1580,
+      "modified": "2025-06-04T15:47:25.980719",
+      "type": "data",
+      "activities_count": 0
+    },
+    "tal_knowledge.json": {
+      "size": 288,
+      "modified": "2025-06-04T15:47:26.008802",
+      "type": "data",
+      "activities_count": 0
+    },
+    "thinking_enhancement_session.json": {
+      "size": 1435,
+      "modified": "2025-06-04T15:47:26.078331",
+      "type": "session",
+      "activities_count": 0
+    },
+    "thinking_session.json": {
+      "size": 943,
+      "modified": "2025-06-04T15:47:26.086334",
+      "type": "session",
+      "activities_count": 0
+    },
+    "tsconfig.json": {
+      "size": 339,
+      "modified": "2025-06-05T06:12:15.192597",
+      "type": "data",
+      "activities_count": 0
+    },
+    "ultimate_reality_check.json": {
+      "size": 3744,
+      "modified": "2025-06-04T15:47:26.110849",
+      "type": "data",
+      "activities_count": 0
+    }
+  },
+  "keywords": {},
+  "daily_summary": {}
+}

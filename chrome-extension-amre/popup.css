@@ -1,0 +1,369 @@
+/* AMRE - AI Market Research Extension Popup Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    overflow-x: hidden;
+}
+
+.amre-popup {
+    width: 380px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* ヘッダー */
+.amre-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amre-logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.amre-logo p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.amre-version {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* サイト検出 */
+.amre-site-detection {
+    background: #f8f9fa;
+    padding: 12px 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.site-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.site-label {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.site-name {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.site-status {
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.site-status.supported {
+    background: #d4edda;
+    color: #155724;
+}
+
+.site-status.unsupported {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* メインコントロール */
+.amre-controls {
+    padding: 20px;
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+.control-group h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ボタンスタイル */
+.btn-primary, .btn-secondary, .btn-link {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2980b9, #1abc9c);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(52, 152, 219, 0.3);
+}
+
+.btn-secondary {
+    background: #ecf0f1;
+    color: #2c3e50;
+    border: 1px solid #bdc3c7;
+}
+
+.btn-secondary:hover {
+    background: #d5dbdb;
+    transform: translateY(-1px);
+}
+
+.btn-link {
+    background: transparent;
+    color: #3498db;
+    font-size: 13px;
+    padding: 8px 12px;
+    justify-content: center;
+}
+
+.btn-link:hover {
+    background: rgba(52, 152, 219, 0.1);
+}
+
+.btn-icon {
+    font-size: 16px;
+}
+
+/* 統計情報 */
+.amre-stats {
+    background: #f8f9fa;
+    padding: 16px 20px;
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.amre-stats h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #2c3e50;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.stat-item {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-label {
+    display: block;
+    font-size: 12px;
+    color: #6c757d;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* 設定 */
+.amre-settings {
+    padding: 16px 20px;
+}
+
+.settings-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.settings-buttons .btn-link {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* ステータス */
+.amre-status {
+    padding: 12px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+.status-message {
+    font-size: 13px;
+    color: #6c757d;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.status-message.success {
+    color: #28a745;
+}
+
+.status-message.error {
+    color: #dc3545;
+}
+
+.status-message.loading {
+    color: #007bff;
+}
+
+.progress-bar {
+    height: 4px;
+    background: #e9ecef;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #1abc9c);
+    transition: width 0.3s ease;
+    animation: progress-animation 2s ease-in-out infinite;
+}
+
+@keyframes progress-animation {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(0%); }
+    100% { transform: translateX(100%); }
+}
+
+/* クイックアクセス */
+.amre-quick-access {
+    padding: 16px 20px;
+    background: #f8f9fa;
+}
+
+.amre-quick-access h4 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #2c3e50;
+}
+
+.quick-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.quick-btn {
+    padding: 8px 12px;
+    border: 1px solid #bdc3c7;
+    background: white;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quick-btn:hover {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+/* フッター */
+.amre-footer {
+    background: #2c3e50;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+}
+
+.amre-footer p {
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.copyright {
+    opacity: 0.7;
+}
+
+/* スクロールバー */
+.amre-popup::-webkit-scrollbar {
+    width: 6px;
+}
+
+.amre-popup::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.amre-popup::-webkit-scrollbar-thumb {
+    background: #bdc3c7;
+    border-radius: 3px;
+}
+
+.amre-popup::-webkit-scrollbar-thumb:hover {
+    background: #95a5a6;
+}
+
+/* アニメーション */
+.amre-popup {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* レスポンシブ */
+@media (max-width: 400px) {
+    .amre-popup {
+        width: 100vw;
+        border-radius: 0;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-buttons {
+        grid-template-columns: 1fr;
+    }
+}

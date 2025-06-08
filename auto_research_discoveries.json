@@ -547,5 +547,56 @@
     "command": "claude --resume abc",
     "source": "https://docs.anthropic.com/en/docs/claude-code/cli-usage",
     "discovered_at": "2025-06-04T09:53:23.419963"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "awesome-ai-testing-tools",
+    "url": "https://github.com/furudo-erika/awesome-ai-testing-tools",
+    "description": "A Collection of Awesome AI Testing Tools",
+    "stars": 1,
+    "source": "GitHub search: awesome-ai-tools",
+    "discovered_at": "2025-06-04T15:50:16.939349"
+  },
+  {
+    "type": "awesome_github_repo",
+    "name": "awesome-agentic-search",
+    "url": "https://github.com/qhjqhj00/awesome-agentic-search",
+    "description": "\ud83d\udd0d Awesome Agentic Search is a curated list of papers, tools, and resources on agentic search\u2014where AI agents plan, search, and reason to answer complex questions. Explore the latest research, benchmarks, and industry solutions for next-gen search-enhanced AI! \ud83e\udd16\u2728",
+    "stars": 22,
+    "source": "GitHub search: awesome-ai-tools",
+    "discovered_at": "2025-06-04T15:50:16.939351"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "mcp-proxy",
+    "version": "3.3.0",
+    "description": "A TypeScript SSE proxy for MCP servers that use stdio transport.",
+    "keywords": [
+      "MCP",
+      "SSE",
+      "proxy"
+    ],
+    "install_cmd": "npx -y mcp-proxy",
+    "source": "NPM search: mcp-",
+    "discovered_at": "2025-06-04T15:50:17.504538"
+  },
+  {
+    "type": "npm_mcp_package",
+    "name": "@agentdeskai/browser-tools-mcp",
+    "version": "1.2.1",
+    "description": "MCP (Model Context Protocol) server for browser tools integration",
+    "keywords": [
+      "mcp",
+      "model-context-protocol",
+      "browser",
+      "tools",
+      "debugging",
+      "ai",
+      "chrome",
+      "extension"
+    ],
+    "install_cmd": "npx -y @agentdeskai/browser-tools-mcp",
+    "source": "NPM search: model-context-protocol",
+    "discovered_at": "2025-06-04T15:50:19.335058"
   }
 ]

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-06-06T22:36:02.141Z",
+  "summary": {
+    "total": 3,
+    "success": 3,
+    "failed": 0,
+    "successRate": 100
+  },
+  "results": [
+    {
+      "test": "manifest.json",
+      "status": "success",
+      "details": "Name: AMRE Test Version, Version: 0.1.0"
+    },
+    {
+      "test": "content-script",
+      "status": "success",
+      "details": "Size: 5KB, Functions: 5"
+    },
+    {
+      "test": "file-structure",
+      "status": "success",
+      "details": "JS: 7, JSON: 3"
+    }
+  ],
+  "installPath": "/mnt/c/Claude Code/tool/chrome-extension-amre"
+}

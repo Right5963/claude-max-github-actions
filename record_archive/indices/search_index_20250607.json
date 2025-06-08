@@ -1,0 +1,301 @@
+{
+  "created": "2025-06-07T06:20:32.698120",
+  "files": {
+    ".git_knowledge_db.json": {
+      "size": 10255,
+      "modified": "2025-06-04T15:47:23.403849",
+      "type": "data",
+      "activities_count": 0
+    },
+    ".obsidian_sync_state.json": {
+      "size": 69,
+      "modified": "2025-06-04T19:41:53.721446",
+      "type": "data",
+      "activities_count": 0
+    },
+    ".smart_git_state.json": {
+      "size": 91,
+      "modified": "2025-06-06T23:45:25.136134",
+      "type": "data",
+      "activities_count": 0
+    },
+    "ai_content_research_2025-06-05.json": {
+      "size": 2770,
+      "modified": "2025-06-05T19:41:44.023619",
+      "type": "data",
+      "activities_count": 0
+    },
+    "ai_insight_evaluation.json": {
+      "size": 1862,
+      "modified": "2025-06-04T15:47:23.911420",
+      "type": "data",
+      "activities_count": 0
+    },
+    "ai_success_works_analysis_2025-06-05.json": {
+      "size": 222263,
+      "modified": "2025-06-06T03:14:56.316566",
+      "type": "data",
+      "activities_count": 0
+    },
+    "all_fanza_products_20250607_022114.json": {
+      "size": 6535,
+      "modified": "2025-06-07T02:21:13.823036",
+      "type": "data",
+      "activities_count": 0
+    },
+    "auto_research_discoveries.json": {
+      "size": 19633,
+      "modified": "2025-06-04T15:50:19.150405",
+      "type": "data",
+      "activities_count": 0
+    },
+    "complete_fanza_121_analysis_20250607_022536.json": {
+      "size": 101423,
+      "modified": "2025-06-07T02:25:36.953314",
+      "type": "data",
+      "activities_count": 0
+    },
+    "complete_fanza_121_analysis_20250607_022910.json": {
+      "size": 101423,
+      "modified": "2025-06-07T02:29:09.772445",
+      "type": "data",
+      "activities_count": 0
+    },
+    "current_session.json": {
+      "size": 96,
+      "modified": "2025-06-07T06:20:31.025335",
+      "type": "session",
+      "activities_count": 0
+    },
+    "fanza_analysis_20250607_011928.json": {
+      "size": 4331,
+      "modified": "2025-06-07T01:19:28.321502",
+      "type": "data",
+      "activities_count": 0
+    },
+    "fanza_analysis_20250607_011948.json": {
+      "size": 2015,
+      "modified": "2025-06-07T01:19:48.114607",
+      "type": "data",
+      "activities_count": 0
+    },
+    "fanza_deep_psychology_analysis_20250607_020707.json": {
+      "size": 4389,
+      "modified": "2025-06-07T02:07:07.988016",
+      "type": "data",
+      "activities_count": 0
+    },
+    "fanza_real_analysis_20250607_014305.json": {
+      "size": 3079,
+      "modified": "2025-06-07T01:43:04.538940",
+      "type": "data",
+      "activities_count": 0
+    },
+    "fanza_real_deep_analysis_2025-06-07.json": {
+      "size": 14693,
+      "modified": "2025-06-07T02:07:40.613583",
+      "type": "data",
+      "activities_count": 0
+    },
+    "hybrid_intelligence.json": {
+      "size": 3247,
+      "modified": "2025-06-04T15:47:24.547358",
+      "type": "data",
+      "activities_count": 0
+    },
+    "inbox_analysis_summary.json": {
+      "size": 111,
+      "modified": "2025-06-04T15:47:24.607687",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_actual_working.json": {
+      "size": 981,
+      "modified": "2025-06-06T23:47:09.559746",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_claude_code_settings.json": {
+      "size": 1561,
+      "modified": "2025-06-06T23:47:09.558746",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_config.json": {
+      "size": 1514,
+      "modified": "2025-06-06T23:47:09.558746",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_config_correct.json": {
+      "size": 896,
+      "modified": "2025-06-06T23:47:09.558746",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_correct_config.json": {
+      "size": 1461,
+      "modified": "2025-06-07T00:25:53.028790",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_efficiency_dashboard.json": {
+      "size": 1330,
+      "modified": "2025-06-04T15:47:24.975523",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_english.json": {
+      "size": 591,
+      "modified": "2025-06-06T23:47:09.830249",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_escaped.json": {
+      "size": 793,
+      "modified": "2025-06-06T23:47:09.822248",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_fixed.json": {
+      "size": 783,
+      "modified": "2025-06-06T23:47:09.822248",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_integration_report.json": {
+      "size": 1720,
+      "modified": "2025-06-04T15:47:25.017810",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_minimal.json": {
+      "size": 744,
+      "modified": "2025-06-06T23:47:09.826247",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_settings_actual.json": {
+      "size": 1293,
+      "modified": "2025-06-06T23:47:09.558746",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_slash.json": {
+      "size": 778,
+      "modified": "2025-06-06T23:47:09.830249",
+      "type": "data",
+      "activities_count": 0
+    },
+    "mcp_working_config.json": {
+      "size": 1205,
+      "modified": "2025-06-06T23:47:09.561747",
+      "type": "data",
+      "activities_count": 0
+    },
+    "package-lock.json": {
+      "size": 59613,
+      "modified": "2025-06-05T06:13:59.613267",
+      "type": "data",
+      "activities_count": 0
+    },
+    "package.json": {
+      "size": 546,
+      "modified": "2025-06-05T06:12:07.582686",
+      "type": "data",
+      "activities_count": 0
+    },
+    "pdca_data.json": {
+      "size": 624,
+      "modified": "2025-06-04T15:47:25.296242",
+      "type": "data",
+      "activities_count": 0
+    },
+    "poster_prompts.json": {
+      "size": 697,
+      "modified": "2025-06-04T15:47:25.523851",
+      "type": "data",
+      "activities_count": 0
+    },
+    "reality_check_report.json": {
+      "size": 1930,
+      "modified": "2025-06-04T15:47:25.604603",
+      "type": "data",
+      "activities_count": 0
+    },
+    "round3_final_optimization.json": {
+      "size": 2306,
+      "modified": "2025-06-04T15:47:25.732799",
+      "type": "data",
+      "activities_count": 0
+    },
+    "sales_core_data.json": {
+      "size": 957,
+      "modified": "2025-06-04T15:47:25.738799",
+      "type": "data",
+      "activities_count": 0
+    },
+    "selling_data.json": {
+      "size": 268,
+      "modified": "2025-06-04T15:47:25.767313",
+      "type": "data",
+      "activities_count": 0
+    },
+    "session_20250603.json": {
+      "size": 205,
+      "modified": "2025-06-04T15:47:25.780366",
+      "type": "session",
+      "activities_count": 0
+    },
+    "system_health_report_detailed.json": {
+      "size": 1728,
+      "modified": "2025-06-04T15:47:25.953461",
+      "type": "data",
+      "activities_count": 0
+    },
+    "system_reality_report.json": {
+      "size": 1580,
+      "modified": "2025-06-04T15:47:25.980719",
+      "type": "data",
+      "activities_count": 0
+    },
+    "tal_knowledge.json": {
+      "size": 288,
+      "modified": "2025-06-04T15:47:26.008802",
+      "type": "data",
+      "activities_count": 0
+    },
+    "thinking_enhancement_session.json": {
+      "size": 1435,
+      "modified": "2025-06-04T15:47:26.078331",
+      "type": "session",
+      "activities_count": 0
+    },
+    "thinking_session.json": {
+      "size": 943,
+      "modified": "2025-06-04T15:47:26.086334",
+      "type": "session",
+      "activities_count": 0
+    },
+    "tsconfig.json": {
+      "size": 339,
+      "modified": "2025-06-05T06:12:15.192597",
+      "type": "data",
+      "activities_count": 0
+    },
+    "ultimate_reality_check.json": {
+      "size": 3744,
+      "modified": "2025-06-04T15:47:26.110849",
+      "type": "data",
+      "activities_count": 0
+    },
+    "visual_psychology_reproduction_guide_20250607_021201.json": {
+      "size": 1667,
+      "modified": "2025-06-07T02:12:01.511408",
+      "type": "data",
+      "activities_count": 0
+    }
+  },
+  "keywords": {},
+  "daily_summary": {}
+}
